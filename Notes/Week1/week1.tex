@@ -110,7 +110,94 @@
             \item The remaining electrons go on the central atom.
             \item If you have too few electrons for every atom to have an octet, use lone pair electrons to convert single bonds to double bonds. We can also use triple bonds.
         \end{enumerate}
-        \item \ce{CH4} and \ce{NH3} presented as a worked example.
+        \item \ce{CH4} and \ce{NH3} presented as worked examples.
+    \end{itemize}
+    \item \marginnote{9/30:}Today:
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Lewis Structures.
+        \item Formal charges.
+        \item Isomers.
+        \item Structural formulas.
+        \item Resonance.
+        \item Orbitals and bonding.
+    \end{enumerate}
+    \item Lewis structures:
+    \begin{itemize}
+        \item \ce{H2CO} (formaldehyde) and \ce{CH3COOH} (acetic acid) presented as worked examples.
+    \end{itemize}
+    \item Formal charge determination:
+    \begin{itemize}
+        \item If the number of valence electrons does not equal the total number of electrons on an atom, then you will have a formal charge.
+        \item Rule:
+        \begin{align*}
+            \text{Formal Charge} &= \text{normal valence }\e[-]-\text{actual }\e[-]\\
+            &= \text{valence }\e[-]-\left( \text{nonbonding }\e[-]+\frac{1}{2}\text{bonding }\e[-] \right)\\
+            &= \text{valence }\e[-]-(\text{dots}+\text{lines})
+        \end{align*}
+        \item \ce{CH3COO-} (acetate) has a formal charge of $6-7=-1$ on its singly bonded oxygen.
+        \item \ce{CH3NH3+} (methyl ammonium) has a formal charge of $5-4=+1$ on its nitrogen.
+        \item Exceptions: Open shell Group III central atoms (e.g., \ce{B} and \ce{Al}).
+        \begin{itemize}
+            \item \ce{BF3} acts as a Lewis acid because it wants to grab $2\,\e[-]$ to form an octet.
+            \item It often acts in acid-base coupling reactions, grabbing a lone pair from an oxygen in an adjacent molecule and bonding through it.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{OChem Basics}
+\begin{itemize}
+    \item Isomers:
+    \begin{itemize}
+        \item Constitutional isomers: Same molecular formula but different bond connectivities.
+        \item Acetone vs. 3-propenol, yet both are \ce{C3H6O}.
+    \end{itemize}
+    \item Structural formulas:
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(-[2]Cl)(-[6]H)-C(-[2]H)(-[6]H)-H}
+            \caption{Dash structural formula.}
+            \label{fig:structuralFormulasa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{-[:-30]-[:30](-[2]Cl)-[:-30]}
+            \caption{Bond line formula.}
+            \label{fig:structuralFormulasb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \ce{CH3CH3CH2ClCH3}
+            \caption{Condensed formula.}
+            \label{fig:structuralFormulasc}
+        \end{subfigure}
+        \caption{Structural formulas.}
+        \label{fig:structuralFormulas}
+    \end{figure}
+    \item \textbf{Dash structural formula}: A Lewis structure.
+    \item \textbf{Bond line formula}: No \ce{C-H}'s, show a vertex for each carbon, show heteroatoms and heteroatom \ce{H}'s. \emph{Also known as} \textbf{line-angle structure}, \textbf{zig-zag structure}.
+    \item \textbf{Condensed formula}: All atoms written out with no bonds or lone pairs.
+    \item \textbf{3D representation}: A dash structural/bond line formula with wedges and dashes.
+    \item \textbf{Resonance}: When a molecule or an ion can be represented by 2 or more Lewis structures, i.e., two or more structures with the same skeleton connected by different electrons.
+    \begin{itemize}
+        \item Resonance structures or resonance contributors.
+        \item The actual molecule is somewhere between the contributors.
+        \item \ce{CO3^2-} presented as a worked example.
+        \item Guidelines:
+        \begin{enumerate}
+            \item Only lone pairs or $\pi$ electrons move (never move single bonds).
+            \item No structure with greater than $8\,\e[-]$ on a 2nd row atom.
+            \item The species with the maximum number of octets is the strongest contributor.
+            \item Charge on suitable atoms (e.g., negative charge on the atom with the highest electronegativity).
+        \end{enumerate}
+        \item Resonance stabilization comes from delocalization. When 2 or more resonance structures, the "real" structure is somewhere in between (the real is more stable than any contributor).
+        \item \ce{CH3COO-} (acetate), \ce{CH2CHCH2+}, and \ce{(CH3)2CO} presented as worked examples.
+        \item You can also depict delocalization with a curving dashed bond and $\delta^-$'s.
     \end{itemize}
 \end{itemize}
 

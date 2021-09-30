@@ -1,10 +1,15 @@
 \usepackage[margin=1in]{geometry}
+\usepackage{csquotes}
 \usepackage{fancyhdr}
 \usepackage{marginnote}
 \usepackage{enumitem}
 \usepackage{amsmath,amssymb}
+\usepackage{subcaption}
 \usepackage{mhchem}
+\usepackage{chemfig}
 \usepackage[hidelinks]{hyperref}
+
+\MakeOuterQuote{"}
 
 \fancypagestyle{main}{
     \fancyhf{}
@@ -20,6 +25,9 @@
 \reversemarginpar
 
 \setlist[itemize,3]{label={\scriptsize$\blacksquare$}}
+
+\setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
+\setcharge{extra sep=3pt}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\e}[1][]{\text{e}^{#1}}
