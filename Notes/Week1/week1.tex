@@ -203,5 +203,109 @@
 
 
 
+\section{Bonding and Orbital Diagrams}
+\begin{itemize}
+    \item \marginnote{10/5:}Today:
+    \begin{enumerate}
+        \setcounter{enumi}{8}
+        \item Orbital theory and bonding.
+        \item Methane.
+        \item Ethane.
+        \item Ethylene.
+        \item Acetylene.
+        \item Comparison of $sp^3$, $sp^2$, $sp$ orbitals.
+        \item VSEPR Model + Molecular Symmetry.
+    \end{enumerate}
+    \item Orbital theory and bonding:
+    \begin{itemize}
+        \item Defines \textbf{atomic orbitals}.
+        \item Reviews $s$ and $p$ orbital shapes, positive and negative regions, and nodes.
+        \item Energy of orbitals diagram.
+        \item Phosphorous and sulfur can exceed the octet rule since they have $d$ orbitals in which to stash extra electrons.
+        \item Filled with the Aufbau/Pauli Exclusion principles, and Hund's Rule.
+        \item Goes over bonding energy diagram.
+        \item Mathematically, we have a Linear Combination of Atomic Orbitals (or LCAO).
+        \begin{itemize}
+            \item Electrons are represented as waves; thus, they have $+$ and $-$ phases.
+            \item Opposite phases are destructive; this forms $\sigma^*$ orbitals.
+            \item Same phases are constructive; this forms $\sigma$ orbitals.
+        \end{itemize}
+        \item Goes over MO diagrams.
+    \end{itemize}
+    \item \textbf{Atomic orbital}: A space where electrons are likely to be found 95\% of the time.
+    \item \textbf{Degenerate} (orbitals): Two orbitals with the same energy.
+    \item \textbf{Chemical bond}: A favorable interaction between 2 atoms, i.e., one that helps to fill the outer orbitals to achieve a noble gas configuration.
+    \item Bonding in methane:
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \footnotesize
+    
+            \begin{scope}
+                \draw [thick,-latex] (0,0) -- node[left]{$E$} (0,2.5);
+                \draw (0.8,0.2) -- node[above]{$\upharpoonleft\downharpoonright$} ++(0.5,0) node[right=6mm]{$1s$};
+                \draw (0.8,1) -- node[above]{$\upharpoonleft\downharpoonright$} ++(0.5,0) node[right=6mm]{$2s$};
+                \draw (0.2,1.5) -- node[above]{$\upharpoonleft$} ++(0.5,0);
+                \draw (0.8,1.5) -- node[above]{$\upharpoonleft$} ++(0.5,0);
+                \draw (1.4,1.5) -- ++(0.5,0) node[right]{$2p$};
+            \end{scope}
+            \node at (3.5,1.5) {\ce{->[promotion]}};
+            \begin{scope}[xshift=5cm]
+                \draw [thick,-latex] (0,0) -- node[left]{$E$} (0,2.5);
+                \draw (0.8,0.2) -- node[above]{$\upharpoonleft\downharpoonright$} ++(0.5,0) node[right=6mm]{$1s$};
+                \draw (0.8,1) -- node[above]{$\upharpoonleft$} ++(0.5,0) node[right=6mm]{$2s$};
+                \draw (0.2,1.5) -- node[above]{$\upharpoonleft$} ++(0.5,0);
+                \draw (0.8,1.5) -- node[above]{$\upharpoonleft$} ++(0.5,0);
+                \draw (1.4,1.5) -- node[above]{$\upharpoonleft$} ++(0.5,0) node[right]{$2p$};
+            \end{scope}
+            \node at (8.5,1.5) {\ce{->[hybridization]}};
+            \begin{scope}[xshift=10cm]
+                \draw [thick,-latex] (0,0) -- node[left]{$E$} (0,2.5);
+                \draw (1.1,0.2) -- node[above]{$\upharpoonleft\downharpoonright$} ++(0.5,0) node[right=12mm]{$1s$};
+                \draw (0.2,1.35) -- node[above]{$\upharpoonleft$} ++(0.5,0);
+                \draw (0.8,1.35) -- node[above]{$\upharpoonleft$} ++(0.5,0);
+                \draw (1.4,1.35) -- node[above]{$\upharpoonleft$} ++(0.5,0);
+                \draw (2,1.35) -- node[above]{$\upharpoonleft$} ++(0.5,0) node[right]{$2sp^3$};
+            \end{scope}
+        \end{tikzpicture}
+        \caption{Bonding in methane.}
+        \label{fig:methaneEnergyDiagram}
+    \end{figure}
+    \begin{itemize}
+        \item Draws an orbital diagram for carbon.
+        \item Promotes an electron from $2s\to 2p_z$.
+        \item Hybridizes $2s,2p_x,2p_y,2p_z$ into 4 degenerate $sp^3$ orbitals of weighted average energy, each containing only 1 electron.
+        \item Links each of these $sp^3$ electrons to the $1s$ electron in \ce{H2}, forming $\sigma$ orbitals.
+        \item The new orbitals adopt a tetrahedral arrangement to be as far apart as possible.
+    \end{itemize}
+    \item Bonding in ethane.
+    \begin{itemize}
+        \item Two $sp^3$ electrons combine in a $\sigma$ orbital; no electrons go into the $\sigma^*$ MO.
+    \end{itemize}
+    \item The structure of ethylene.
+    \begin{itemize}
+        \item Side by side overlap of $p$ orbitals forms a $\pi$ bond.
+        \item The angle between the hydrogens in ethylene is slightly less than $\ang{120}$.
+        \item The bond is slightly shorter than in ethane (greater $s$ character plus an additional type of bond).
+        \item Features of the \ce{C=C} double bond.
+        \begin{itemize}
+            \item $sp^2$-hybridized carbons making $3\sigma$ and $1\pi$ bond.
+            \item A $\pi$ bond is weaker than a $\sigma$ bond, but still strong.
+            \item $\sigma_{sp^2-sp^2}$ is stronger than $\sigma_{sp^3-sp^3}$.
+            \item Restricted rotation (hard to twist \ce{C2H2} by $\ang{90}$).
+            \item cis-trans isomerism as a result of restricted rotation.
+            \item The $\pi$ bond acts like a Lewis base with some systems since the $\pi$ electrons are held relatively weakly. In other words, the $\pi$-electrons are exposed.
+        \end{itemize}
+        \item Draws an MO diagram for the carbons.
+    \end{itemize}
+    \item The structure of acetylene.
+    \begin{itemize}
+        \item 2 $\pi$ bonds, 1 $\sigma$ bond.
+        \item Even greater strength, but not quite as much greater as the $\sigma_{sp^3-sp^3}\to\sigma_{sp^2-sp^2}$ difference.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
