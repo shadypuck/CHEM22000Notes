@@ -1,0 +1,138 @@
+\documentclass[../psets.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\leftmark}{Problem Set \thesection}
+
+\begin{document}
+
+
+
+
+\section{Bonding and Molecular Structure}
+\begin{enumerate}
+    \setlist[enumerate,3]{label={(\roman*)}}
+    \item \marginnote{10/14:}Write a Lewis structure for each of the following compounds and indicate whether the bonding is nonpolar covalent, polar covalent, or ionic. Assume that a difference in electronegativity greater than 1.7 corresponds to a bond that is considered predominantly ionic.
+    \begin{enumerate}
+        \item \ce{HCl}.
+        \item \ce{C2H6}.
+        \item \ce{NaBr}.
+        \item \ce{CH3I}.
+        \item \ce{H2S}.
+        \item \ce{N2H4}.
+        \item \ce{CsF}.
+    \end{enumerate}
+    \item For the following covalent bonds\dots
+    \begin{enumerate}
+        \item Use the symbols $\delta^+$ and $\delta^-$ to indicate the direction of polarity (if any).
+        \begin{enumerate}
+            \item \ce{C-F}.
+            \item \ce{N-Br}.
+            \item \ce{B-C}.
+            \item \ce{Si-H}.
+        \end{enumerate}
+        \item Rank the following covalent bonds in order of \emph{increasing} polarity.
+        \begin{enumerate}
+            \item \ce{C-H}, \ce{O-H}, \ce{N-H}.
+            \item \ce{C-N}, \ce{C-O}, \ce{B-O}.
+            \item \ce{C-P}, \ce{C-S}, \ce{C-N}.
+        \end{enumerate}
+    \end{enumerate}
+    \item Formal charge.
+    \begin{enumerate}
+        \item Consider the oxygen atom in the structures below and determine if it has a formal charge. If so, label it on the molecule.
+        \begin{figure}[h!]
+            \centering
+            \small
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{\charge{90=\:}{O}(-H)(-[4]H)(-[6]H)}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{\charge{0=\:,90=\:,270=\:}{O}-[4]H}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{\charge{90=\:}{O}(-H)=[4](-[:120]H)(-[:-120]H)}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{\charge{[extra sep=1.5pt]135=\:,-135=\:}{O}=C=\charge{[extra sep=1.5pt]45=\:,-45=\:}{O}}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{-[:30](=[2]\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-[:-30]\charge{0=\:,90=\:,270=\:}{O}}
+            \end{subfigure}
+        \end{figure}
+        \item Consider the nitrogen atom in the structures below and determine if it has a formal charge. If so, label it on the molecule.
+        \begin{figure}[h!]
+            \centering
+            \small
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{N(=CH_2)(-[:120]H_3C)(-[:-120]H)}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{H_3C-\charge{90=\:,270=\:}{N}-H}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{\charge{270=\:}{N}(-\charge{90=\:,270=\:}{O}H)(-[2]H)(-[4]H)}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{H_3C-\charge{90=\:}{N}H_2}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \chemfig{N(-CH_3)(-[2]CH_3)(-[4]H_3C)(-[6]CH_3)}
+            \end{subfigure}
+        \end{figure}
+    \end{enumerate}
+    \item Draw Lewis structures and resonance structures (if any) that satisfy the octet rule for each of the following ions with all valence electrons and formal charges clearly noted.
+    \begin{enumerate}
+        \item \ce{NH2-}.
+        \item \ce{NO2-}.
+        \item \ce{ClO-}.
+        \item \ce{HCOO-}.
+        \item \ce{BH4-}.
+        \item \ce{CH3CH2CO2H}.
+        \item \ce{O3}.
+        \item \ce{CH2N2}.
+    \end{enumerate}
+    \item For the following chemical species, draw a resonance structure that satisfies the octet rule. Indicate whether you expect it to be a major or minor contributor to the actual structure of the species and briefly state your reasoning. Use curved arrows to clearly show how the structure converts to another structure (if any).
+    \begin{enumerate}[itemsep=1.5em]
+        \item   \hspace{1.9cm}
+                \schemestart
+                    \chemfig{[:18]*5(--O-(=O)--)}
+                    \arrow{<->}
+                \schemestop
+        \item   \hspace{2cm}
+                \schemestart
+                    \chemfig{-[:30](=[2]O)-[:-30]\charge{0:3pt=$\ominus$}{}}
+                    \arrow{<->}
+                \schemestop
+        \item   \schemestart
+                    \chemfig{-[:30]-[:-30]-[:30]\charge{90:3pt=$\ominus$}{}-[:-30]~[:-30]N}
+                    \arrow{<->}
+                \schemestop
+        \item   \hspace{6pt}
+                \schemestart
+                    \chemfig{\charge{135=$\oplus$}{N}(-[:-150]\charge{135=$\ominus$}{O})(=[2]O)(-[:-30]\charge{-90:3pt=$\ominus$}{}-[:30]-[:-30])}
+                    \arrow{<->}
+                \schemestop
+    \end{enumerate}
+    \item Draw all four constitutional isomers of \ce{C4H9Br} using bond-line formulas.
+    \item For each of the following condensed structures: (i) draw the corresponding Lewis structures, (ii) provide the hybridization to all carbon atoms, and (iii) draw individual $p$ orbitals for all the $\pi$ bonds with directions clearly indicated.
+    \begin{enumerate}
+        \item \ce{CH2CHCHCH2}.
+        \item \ce{CH3CCCH3}.
+        \item \ce{CH2CCHCH3}.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+\end{document}
