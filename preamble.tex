@@ -6,8 +6,9 @@
 \usepackage{siunitx}
 \usepackage[style=chem-acs]{biblatex}
 \usepackage{pdfpages}
-\usepackage{amsmath,amssymb}
-\usepackage{subcaption}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{tikz}
+\usepackage{subcaption,float}
 \usepackage{mhchem}
 \usepackage{chemfig}
 \usepackage[hidelinks]{hyperref}
@@ -34,6 +35,9 @@
 \DeclareSIUnit{\calorie}{cal}
 
 \DefineBibliographyStrings{english}{bibliography={References}}
+
+\colorlet{rex}{red!30}
+\colorlet{rey}{red!10}
 
 \setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
 \setcharge{extra sep=3pt}
