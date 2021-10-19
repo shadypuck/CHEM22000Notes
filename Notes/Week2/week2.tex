@@ -119,9 +119,65 @@
     \item \textbf{Hydrogen bonding}: Dipole-dipole interaction between \ce{H}-atoms bonded to \ce{O}, \ce{N}, \ce{F} ($\SIrange[per-mode=symbol]{2}{10}{\kilo\calorie\per\mole}$).
     \item \textbf{Dispersion forces}: Weak ($<\SI[per-mode=symbol]{1}{\kilo\calorie\per\mole}$). Momentary distortion of the electron cloud (temporary dipole). Induces dipoles in surrounding molecules. \emph{Also known as} \textbf{London forces}.
     \begin{itemize}
-        \item Depends on relative polarizability, i.e., how far valence electrons are from the nucleus.
+        \item Depends on \textbf{relative polarizability}.
+        \item Dependes on the surface area of the molecule --- more surface area means more distance electrons can spread apart.
     \end{itemize}
-    \item IR spectroscopy: The frequencies absorbed vary based on the type. Higher stretching freqencies for lighter atoms and stronger bonds.
+    \item \textbf{Relative polarizability}: How far valence electrons are from the nucleus.
+    \item Solubility:
+    \begin{itemize}
+        \item For something to be soluble, you need to have favorable forces between them.
+        \item Ionic compounds are soluble in water, less soluble in polar solvents, and insoluble in nonpolar solvents.
+        \item Organic compounds: $<3$ carbons is soluble, 4-5 carbons is borderline, $\geq 6$ is insoluble. More soluble in organic solvents.
+    \end{itemize}
+    \item Organic solvents:
+    \begin{itemize}
+        \item \ce{CH2Cl2} --- methylene chloride.
+        \item \ce{HCCl3} --- chloroform.
+        \item \ce{H3CCOCH3} --- acetone.
+        \item Diethyl ether.
+        \item THF.
+        \item Cyclohexane.
+    \end{itemize}
+    \item In TLC, the silica gel is very polar, so polar compounds will not move far up the plate. Nonpolar solvents will drag nonpolar compounds up pretty high.
+    \item HOMO and LUMO get closer as conjugation increases.
+    \item IR spectroscopy:
+    \begin{itemize}
+        \item The frequencies absorbed vary based on the type. Higher stretching frequencies for lighter atoms and stronger bonds.
+        \item IR radiation causes transitions in vibrational modes of bonds.
+        \item The stronger the bond and the lighter the atoms, the faster the vibration of the molecule and the higher the stretching frequency.
+        \item The $\Delta E$'s are inherent characteristics of the bonds and nuclei.
+        \item Bonds absorb light of characteristic energy, frequency, and wavelength.
+        \item We usually report IR spectra in terms of the wavenumber $\bar{\nu}$.
+        \item The frequencies absorbed can indicate bond types and functional groups in the molecule.
+        \item Anything above 1500 (of wavenumber less than 1500) is called the \textbf{fingerprint region} --- it may not tell you what a molecule is, but it will tell you if two molecules are the same.
+        \item Sharp peaks at high wavenumbers are characteristic of \ce{N-H} interactions.
+        \item Make a line at $\SI{3000}{\per\centi\meter}$. Things to the right of that indicate aliphatic \ce{C-H}'s. Things to the left indicate $sp^2$ \ce{C-H} groups. Things more to the left indicate $sp$ \ce{C-H} groups.
+        \item Not all bonds are visible --- stretching bands must change the dipole. Thus, for example, the \ce{C=H} stretch in trans-but-2-ene is not IR active, but the \ce{C=H} stretch in cis-but-2-ene is IR active.
+        \item If you want to substitute \ce{D} for \ce{H}, the peak formerly associated with the \ce{R-H} bond will move lower.
+    \end{itemize}
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|l|}
+            \hline
+            \multicolumn{2}{|c|}{\textbf{COMMON ABSORPTIONS}}\\ \hline
+            Aromatic \ce{C-C} & Two peaks usually in the range of $\SIrange{1500}{1600}{\per\centi\meter}$\\ \hline
+            \ce{C=C} & $\sim\SI{1650}{\per\centi\meter}$\\ \hline
+            \ce{C=O} & $\sim\SI{1710}{\per\centi\meter}$ (shifts to $\sim\SI{1735}{\per\centi\meter}$ for esters)\\ \hline
+            \ce{C=C} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
+            \ce{C=N} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
+            \ce{C-H} (aldehyde) & Two peaks at $\SI{2170}{\per\centi\meter}$ and $\SI{2810}{\per\centi\meter}$\\ \hline
+            $sp^3$ \ce{C-H} & Just to the right of $\SI{3000}{\per\centi\meter}$\\ \hline
+            $sp^2$ \ce{C-H} & Just to the left of $\SI{3000}{\per\centi\meter}$\\ \hline
+            $sp$ \ce{C-H} & $\sim\SI{3300}{\per\centi\meter}$\\ \hline
+            \ce{N-H} & $\sim\SI{3300}{\per\centi\meter}$ (one peak for \ce{-NH-}, two peaks for \ce{-NH2})\\ \hline
+            \ce{O-H} (alcohol) & $\sim\SI{3400}{\per\centi\meter}$ (a broad, smooth peak)\\ \hline
+            \ce{O-H} (acid) & $\sim\SIrange{2500}{3500}{\per\centi\meter}$ (a very broad, ugly [not smooth] peak)\\ \hline
+        \end{tabular}
+        \caption{Common IR spectroscopy absorptions.}
+        \label{fig:IRabsorptions}
+    \end{table}
 \end{itemize}
 
 
