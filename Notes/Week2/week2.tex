@@ -165,8 +165,8 @@
             Aromatic \ce{C-C} & Two peaks usually in the range of $\SIrange{1500}{1600}{\per\centi\meter}$\\ \hline
             \ce{C=C} & $\sim\SI{1650}{\per\centi\meter}$\\ \hline
             \ce{C=O} & $\sim\SI{1710}{\per\centi\meter}$ (shifts to $\sim\SI{1735}{\per\centi\meter}$ for esters)\\ \hline
-            \ce{C=C} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
-            \ce{C=N} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
+            \ce{C#C} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
+            \ce{C#N} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
             \ce{C-H} (aldehyde) & Two peaks at $\SI{2170}{\per\centi\meter}$ and $\SI{2810}{\per\centi\meter}$\\ \hline
             $sp^3$ \ce{C-H} & Just to the right of $\SI{3000}{\per\centi\meter}$\\ \hline
             $sp^2$ \ce{C-H} & Just to the left of $\SI{3000}{\per\centi\meter}$\\ \hline
@@ -178,6 +178,94 @@
         \caption{Common IR spectroscopy absorptions.}
         \label{fig:IRabsorptions}
     \end{table}
+\end{itemize}
+
+
+
+\section{Acids and Bases}
+\begin{itemize}
+    \item \marginnote{10/14:}\textbf{Br\o nsted-Lowry acid}: A proton donor.
+    \item \textbf{Br\o nsted-Lowry base}: A proton acceptor.
+    \item General reaction:
+    \begin{equation*}
+        \ce{H-A + H2O <=> H3O+ + A-}
+    \end{equation*}
+    \begin{itemize}
+        \item Does curved-arrow formalism for the above reaction.
+    \end{itemize}
+    \item The reaction equilibrium is given by
+    \begin{align*}
+        K_\text{eq} &= \frac{[\ce{A-}][\ce{H3O+}]}{[\ce{HA}][\ce{H2O}]}\\
+        K_\text{eq}[\ce{H2O}] &= \frac{[\ce{A-}][\ce{H3O+}]}{[\ce{HA}]}\\
+       \Ka &= \frac{[\ce{A-}][\ce{H3O+}]}{[\ce{HA}]}
+    \end{align*}
+    \item Note that $[\ce{H2O}]=\SI{55.5}{\molar}$.
+    \item $\pKa=-\log\Ka$ gives numbers that are easier to work with.
+    \begin{itemize}
+        \item The larger the $\pKa$, the weaker the acid.
+        \item The smaller the $\pKa$, the stronger the acid.
+    \end{itemize}
+    \item Gives $\pKa$'s and conjugate bases for the strong acids \ce{HI}, \ce{HBr}, \ce{HCl}, \ce{H2SO4}, and \ce{HNO3}.
+    \begin{itemize}
+        \item Also for the weak acids \ce{CH3CO2H}, \ce{HF}, 
+    \end{itemize}
+    \item There is a relationship between acid strength and conjugate base strength.
+    \begin{itemize}
+        \item The stronger the acid (lower $\pKa$), the weaker the conjugate base.
+        \item The weaker the acid (higher $\pKa$), the stronger the conjugate base.
+    \end{itemize}
+    \item Almost any reaction can be thought of as an acid/base reaction using the Lewis definition.
+    \item Acid-base reaction equilibria:
+    \begin{equation*}
+        \ce{H-A + B <=>[K\textsubscript{eq}] A- + HB}
+    \end{equation*}
+    \begin{itemize}
+        \item Let
+        \begin{align*}
+            K_{\text{a}_1} &= \frac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}&
+            K_{\text{a}_2} &= \frac{[\ce{H3O+}][\ce{B-}]}{[\ce{HB}]}
+        \end{align*}
+        \item Then
+        \begin{align*}
+            K_\text{eq} &= \frac{K_{\text{a}_1}}{K_{\text{a}_2}}\\
+            \log K_\text{eq} &= \log K_{\text{a}_1}-\log K_{\text{a}_2}\\
+            &= \text{p}K_{\text{a}_2}-\text{p}K_{\text{a}_1}\\
+            K_\text{eq} &= 10^{\Delta\pKa}
+        \end{align*}
+        so for any acid-base reaction, the position of the equilibrium can be predicted from the relative $\pKa$'s.
+    \end{itemize}
+    \item Factors influencing acidity:
+    \begin{itemize}
+        \item Bond strength and size.
+        \begin{itemize}
+            \item As bond strength decreases, acidity increases.
+            \item As size of the conjugate base increases, acidity increases (there is more area over which to delocalize the positive charge).
+        \end{itemize}
+        \item Electronegativity.
+        \begin{itemize}
+            \item As electronegativity differences increase, acidity increases.
+        \end{itemize}
+        \item Hybridization.
+        \begin{itemize}
+            \item $sp$ orbitals are more acidic than $sp^3$, with $sp^2$ in between. This is because the electrons are held closer to the nucleus and are less easily given away.
+        \end{itemize}
+        \item Inductive effects.
+        \begin{itemize}
+            \item Electronic effects transmitted through bonds.
+            \item Electron donating or electron withdrawing groups.
+            \item Stronger electron withdrawing groups create more acidic compounds (the conjugate base is more stable, and the proton more easily dissociates).
+            \item Falls off with distance.
+            \item Alkyl groups are electron donating.
+        \end{itemize}
+        \item Resonance effects.
+        \begin{itemize}
+            \item Pulling a proton off of an alcohol leaves negative charge on the oxygen; pulling a proton off a carboxylic acid group leads to an anion that has resonance (and thus is more stable, so the the acid is stronger).
+        \end{itemize}
+        \item Solvation effects.
+        \begin{itemize}
+            \item Charges that are more accessible (primary vs. tertiary) are more easily solvated and thus have more stable conjugate bases. Thus, an acid that has charges on its conjugate base that are more easily solvated is stronger.
+        \end{itemize}
+    \end{itemize}
 \end{itemize}
 
 
