@@ -1,0 +1,94 @@
+\documentclass[../psets.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\leftmark}{Problem Set \thesection}
+\stepcounter{section}
+
+\begin{document}
+
+
+
+
+\section{Acidity and Conformers}
+\begin{enumerate}
+    \item \marginnote{11/2:}For the following compounds, write the conjugate bases that would result if the labeled protons were removed. Include resonance structures if there are any. Indicate which of the two labeled protons you expect to be more acidic and why.
+    \begin{enumerate}[itemsep=1.5em]
+        \item {\footnotesize\chemfig{-[:-30](-[6]H_a)=_[:30]-[:-30]-[:30]-[:-30]~[:-30]-[:-30]H_b}}
+        \item {\footnotesize\chemfig{H_a-[:-150]O-[6]*6(-=-=-(--[:-30]O-[:30]H_b)=)}}
+        \item {\footnotesize\chemfig{-[:-30]-[:30](-[:110]H_a)(-[:70]H)-[:-30]=^[:30]N-[:-30](-[:-110]H_b)(-[:-70]H)-[:30]}}
+        \item {\footnotesize\chemfig{-[2](=[:150]O)-[:30](-[:110]H_a)(-[:70]H)-[:-30](=[:30]O)-[6](-[:-30]H_b)(-[:-70]H)-[:-150]}}
+    \end{enumerate}
+    \item Rank the labeled \ce{H}'s in the following molecule in order of increasing acidity ($1=\text{least acidic}$, $5=\text{most acidic}$). Provide a brief explanation for your ordering.
+    \begin{center}
+        \footnotesize
+        \chemfig{@{Ha}HO-[:30](=[2]O)-[:-30](-[:-110]Br)(-[:-70]@{Hb}H)-[:30](-[2]-[:30]O@{Hc}H)-[:-30](-[:-110]Cl)(-[:-70]@{Hd}H)-[:30](=[2]O)-[:-30]O@{He}H}
+        \chemmove{
+            \small
+            \node [above=1.5mm] at (Ha) {\textbf{a}};
+            \node [below=1.5mm] at (Hb) {\textbf{b}};
+            \node [above=1.5mm] at (Hc) {\textbf{c}};
+            \node [below=1.5mm] at (Hd) {\textbf{d}};
+            \node [above=1.5mm] at (He) {\textbf{e}};
+        }
+    \end{center}
+    \item Rank the following primary amines (anilines in this case) in order of increasing basicity ($1=\text{least basic}$, $4=\text{most basic}$). Write the conjugate acid and provide a brief explanation for your ordering.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{NH_2-[6]*6(-=-(-OCH_3)=-=)}
+            \caption*{A}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{NH_2-[6]*6(-=-(-NO_2)=-=)}
+            \caption*{B}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{NH_2-[6]*6(-=-(-H)=-=)}
+            \caption*{C}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{NH_2-[6]*6(-=-(-CH_3)=-=)}
+            \caption*{D}
+        \end{subfigure}
+    \end{figure}
+    \item Using curved arrows, draw a reaction mechanism and predict the products.
+    \begin{enumerate}[itemsep=1.5em]
+        \item Lewis Acid-Base Reaction:\quad
+        \schemestart
+            \footnotesize
+            \chemfig{(-[:-30])(=[2]O)(-[:-150])}
+            \+{1em,1.5em}
+            \chemfig{\charge{[extra sep=1.5pt]135=\:,-135=\:,45:3pt=$\ominus$}{N}(-[:60](-[::-60])(-[::60]))(-[:-60](-[::-60])(-[::60]))}
+            \arrow
+        \schemestop
+        \item Br\o nsted Acid-Base Reaction:\quad
+        \schemestart
+            \footnotesize
+            \chemfig{\charge{90=\:}{P}(-[:-30])(-[:-110])(-[:-150])}
+            \arrow{0}[,0]\+{1.5em,1em}
+            \chemfig{AlCl_3}
+            \arrow
+        \schemestop
+    \end{enumerate}
+    \item Perform a conformational analysis of 3-bromo-2-methylpentane using Newman projections viewed through the C3-C4 bond (C3 in the front, C4 in the back). Write the relevant conformations in $\ang{60}$ increments, indicate whether they are eclipsed or staggered, gauche, anti, or syn, and plot their relative potential energy. As you plot their relative potential energy, consider the isopropyl group on carbon 3 to be bulkier than the bromo group on carbon 3.
+    \begin{center}
+        \footnotesize
+        \chemfig{-[:30](-[2])-[:-30](-[6]Br)-[:30]-[:-30]}
+    \end{center}
+    \item For each compound below, draw two chair conformations. Indicate whether the substituents are axial or equatorial. Indicate which chair conformation is more stable.
+    \begin{enumerate}[itemsep=1.5em]
+        \item {\footnotesize\chemfig{-(-[:120])(-[:-120])>:*6(---(<(-[:60])(-[:-60])-)---)}}
+        \item {\footnotesize\chemfig{*6(--(<:)-(<:)-(<)--)}}
+        \item {\footnotesize\chemfig{*6(-(<:)--(<(-[:-30])(-[2]))---)}}
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+\end{document}
