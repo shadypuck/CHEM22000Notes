@@ -43,7 +43,7 @@
             \begin{center}
                 \chemfig{H-C(-[2]H)(-[6]H)-\charge{90=\:,0=\:,-90=\:}{I}}
             \end{center}
-            Nonpolar covalent.
+            \ce{C-H} is nonpolar covalent; \ce{C-I} is nonpolar covalent.
         \end{proof}
         \item \ce{H2S}.
         \begin{proof}[Answer]
@@ -59,7 +59,7 @@
             \begin{center}
                 \chemfig{H-\charge{90=\:}{N}(-[6]H)-\charge{90=\:}{N}(-[6]H)-H}
             \end{center}
-            Polar covalent.
+            \ce{N-H} is polar covalent; \ce{N-N} is nonpolar covalent.
         \end{proof}
         \item \ce{CsF}.
         \begin{proof}[Answer]
@@ -83,7 +83,10 @@
             \end{proof}
             \item \ce{N-Br}.
             \begin{proof}[Answer]
-                Nonpolar.
+                ${\color{white}hi}$
+                \begin{center}
+                    \chemfig{\charge{135[xshift=-1pt]=$\delta^-$}{N}-\charge{45[xshift=5pt]=$\delta^+$}{Br}}
+                \end{center}
             \end{proof}
             \item \ce{B-C}.
             \begin{proof}[Answer]
@@ -94,7 +97,10 @@
             \end{proof}
             \item \ce{Si-H}.
             \begin{proof}[Answer]
-                Nonpolar.
+                ${\color{white}hi}$
+                \begin{center}
+                    \chemfig{\charge{135[xshift=-1pt]=$\delta^+$}{Si}-\charge{45[xshift=5pt]=$\delta^-$}{H}}
+                \end{center}
             \end{proof}
         \end{enumerate}
         \item Rank the following covalent bonds in order of \emph{increasing} polarity.
@@ -247,7 +253,11 @@
         \begin{proof}[Answer]
             ${\color{white}hi}$
             \begin{center}
-                \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(=[2]\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-\charge{90=\:,-90=\:}{O}-H}
+                \schemestart
+                    \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(=[2]\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-\charge{90=\:,-90=\:}{O}-H}
+                    \arrow{<->}
+                    \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(=[2]\charge{0=\:,90=\:,180=\:}{O})=\charge{90=\:}{O}-H}
+                \schemestop
             \end{center}
         \end{proof}
         \item \ce{O3}.
@@ -265,7 +275,11 @@
         \begin{proof}[Answer]
             ${\color{white}hi}$
             \begin{center}
-                \chemfig{C(-[:120]H)(-[:-120]H)=\charge{45:3pt=$\oplus$}{N}=\charge{90=\:,-90=\:,45:3pt=$\ominus$}{N}}
+                \schemestart
+                    \chemfig{C(-[:120]H)(-[:-120]H)=\charge{45:3pt=$\oplus$}{N}=\charge{90=\:,-90=\:,45:3pt=$\ominus$}{N}}
+                    \arrow{<->}
+                    \chemfig{\charge{90=\:,45:3pt=$\ominus$}{C}(-[:120]H)(-[:-120]H)-\charge{45:3pt=$\oplus$}{N}~\charge{0=\:}{N}}
+                \schemestop
             \end{center}
         \end{proof}
     \end{enumerate}
@@ -288,7 +302,7 @@
                     \draw [shorten <=5pt] (O1) to[out=45,in=50] (sb);
                 }
             \end{center}
-            The right structure will be a minor contributor because it has formal charges while the original one doesn't.
+            The right structure will be a minor contributor because it has formal charges while the original one doesn't. Additionally, there is a positive formal charge on oxygen.
         \end{proof}
         \item   \schemestart
                     \chemfig{-[:30](=[2]O)-[:-30]\charge{0:3pt=$\ominus$}{}}
