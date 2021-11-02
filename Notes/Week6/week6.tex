@@ -1,0 +1,76 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{5}
+
+\begin{document}
+
+
+
+
+\chapter{Reactions of Alkenes}
+\section{Alkene Nomenclature and Reactions}
+\begin{itemize}
+    \item \marginnote{11/2:}Alkene nomenclature.
+    \item Degree of unsaturation, aka hydrogen deficiency.
+    \begin{itemize}
+        \item Indicate the sum of the number of rings and $\pi$ bonds in a molecule simply by examining the formula.
+        \item Recall for hydrogens and other heteroatoms (e.g., oxygen, nitrogen, halogens, etc.).
+    \end{itemize}
+    \item Reactions of alkenes:
+    \begin{itemize}
+        \item Important because an understanding of reactions enables us to do syntheses.
+        \item There are three components in a chemical reaction: The reactants, products, and conditions.
+        \begin{itemize}
+            \item We should be able to predict any one of these from the other two.
+            \item We should also be able to draw the reaction mechanism.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Reaction mechanism}: A stepwise description of what happened in the reaction.
+    \begin{itemize}
+        \item This involves arrow pushing.
+    \end{itemize}
+    \item Know Table 6.1 from the textbook.
+    \item \textbf{Hydrohalogenation}: Addition of \ce{H-X} across a \ce{C=C} double bond.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{C(-[:150]H)(-[:-150]H)=[@{CC}]C(-[:30]H)(-[:-30]H)}
+            \+
+            \chemfig{@{H}H-[@{sb}]@{Cl}\charge{-90=\:,0=\:,90=\:}{Cl}}
+            \arrow{<=>}
+            \chemfig{@{C+}\charge{45:3pt=$\oplus$}{C}(<:[:150]H)(<[:-150]H)=C(-[:60]H)(-[:-20]H)(-[:-60]H)}
+            \+
+            \chemfig{@{Cl2}\charge{0=\:,90=\:,180=\:,270=\:}{Cl}}
+            \arrow
+            \chemfig{C(-[:120]H)(-[:150]H)(-[:-120]Cl)=C(-[:60]H)(-[:-20]H)(-[:-60]H)}
+        \schemestop
+        \chemmove{
+            \draw [shorten <=3pt,shorten >=3pt] (CC) to[bend left=90] (H);
+            \draw [shorten <=3pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Cl);
+            \draw [shorten <=6pt,shorten >=3pt] (Cl2) to[bend right=90] (C+);
+        }
+        \caption{Mechanism of hydrohalogenation.}
+        \label{fig:hydrohalogenation}
+    \end{figure}
+    \begin{itemize}
+        \item We add the \ce{H} to one of the alkene carbons and the \ce{X} to the other.
+        \item Since \ce{H-X} likes electrons, it is the \textbf{electrophile}.
+        \item If a carbocation is formed, you have an \textbf{electrophilic addition reaction}.
+        \item For unsymmetric alkenes, we add the X to the more substituted position since a carbocation will form there during the mechanism and be stabilized by \textbf{hyperconjugation}.
+        \begin{itemize}
+            \item This is Markovnikov addition.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Hyperconjugation}: Adjacent \ce{C-H} bonding electrons donate electron density into vacant $p$ orbitals (of \ce{C+}), thus stabilizing the carbocation.
+    \begin{itemize}
+        \item Thus, alkyl groups are considered electron-donating groups because they delocalize positive charges through inductive effects.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
