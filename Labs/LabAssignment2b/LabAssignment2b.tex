@@ -1,0 +1,143 @@
+\documentclass[titlepage]{article}
+
+\input{../../preamble.tex}
+
+\addbibresource{../../main.bib}
+
+\title{Separation and Analysis of Three Unknown Liquids}
+\author{
+    Steven Labalme\\
+    \normalsize Lab Section 1A05
+}
+
+\begin{document}
+
+
+
+
+\maketitle
+
+
+
+\pagestyle{main}
+\renewcommand{\leftmark}{Lab Assignment 2b}
+\setitemize{label={--}}
+\begin{enumerate}
+    \item What is the identity of unknown D and how did you determine this?
+    \begin{center}
+        \footnotesize
+        \chemfig{C(-[2]H)(-[:-30]H)(<[:-110]Cl)(<:[:-150]Cl)}
+    \end{center}
+    \begin{itemize}
+        \item Unknown $D$ is likely dichloromethane. By noting the temperature at which the first drop of liquid fell off the bulb of the thermometer during the distillation, we were able to determine the boiling point of the distillate as $\SI{32.5}{\celsius}$. This most closely matches with the known boiling point of dichloromethane ($\SIrange{39.5}{40}{\celsius}$).
+    \end{itemize}
+    \item Comment on the relative purity of unknown D and how you determined this.
+    \begin{itemize}
+        \item Unknown $D$ is likely not particularly pure since its experimentally determined boiling point is several degrees off from the actual. However, as impurities typically contribute to boiling point \emph{elevation} (not depression), the difference in boiling point could also just be due to human/instrumentation error.
+    \end{itemize}
+    \item What is the identity of unknown E and how did you determine this?
+    \begin{center}
+        \footnotesize
+        \chemfig{*6(-(<[2]?)-(-[:-10])(-[:-50])-?[,4]-(=)--)}
+    \end{center}
+    \begin{itemize}
+        \item Unknown E is likely ($+$)-$\beta$-pinene ((1R,5R)-6,6-dimethyl-2-methylidenebicyclo[3.1.1]heptane). Via polarimetry, we were able to determine the specific rotation of Unknown E as $[\alpha]=\ang{18}$. This most closely matches with the known specific rotation of Unknown $E$ ($\ang{21}$).
+    \end{itemize}
+    \item Comment on the relative purity of unknown E and how you determined this. Be sure to calculate your observed specific optical rotation and from that the enantiomeric excess (ee) as part of your answer.
+    \begin{itemize}
+        \item In terms of the specific rotation, enantiomeric excess is given by the following formula.
+        \begin{equation*}
+            \text{ee} = \frac{|\text{observed }\alpha|}{|\text{known }\alpha|} = \frac{18}{21} \approx 86\%
+        \end{equation*}
+        Thus, the compound is fairly pure, but likely contaminated by some of another compound or some of its enantiomer.
+    \end{itemize}
+    \item What is the identity of unknown F and how did you determine this?
+    \begin{center}
+        \footnotesize
+        \chemfig{HO-[:-30]-[:30]-[:-30]-[:30]-[:-30]-[:30]-[:-30]-[:30]}
+    \end{center}
+    \begin{itemize}
+        \item Unknown F is likely 1-octanol (octan-1-ol). By comparing the main gas chromatography peaks, we were able to determine the retention time of Unknown F as $\SI{2.391}{\minute}$. This most closely matches with the known retention time of 1-octanol ($\SI{2.415}{\minute}$.
+    \end{itemize}
+    \item Comment on the relative purity of unknown F and how you determined this.
+    \begin{itemize}
+        \item Unknown F is likely not entirely pure since there are many other smaller peaks in its gas chromatography spectrum. However, since the peaks are quite small relative to the 1-octanol peak, it is likely pretty pure.
+    \end{itemize}
+    \item For each of the two experiments this quarter (Separation of Unknown Solids and Separation of Unknown Liquids), a list of possible molecules was given. If these lists were not provided, how would this have changed how you determined the identity of any of the unknowns? How would you have modified the experiments to definitively prove the identities of A-F without this information?
+    \begin{itemize}
+        \item I could have compared the results of a number of characterization methods with a vast array of molecules, or I could have used more constructive methods. For instance, IR spectroscopy could have suggested possible functional groups, microwave spectroscopy could have determined bond lengths, NMR spectroscopy could have determined the number of each type of atom present, etc.
+    \end{itemize}
+    \item For each of the purification and analysis techniques that you have learned so far this quarter, list one strength and one drawback. These do not need to be in sentence form.
+    \begin{enumerate}
+        \item TLC.
+        \begin{itemize}
+            \item Strength: Can identify impurities.
+            \item Drawback: Number of compounds that can be tested at once.
+        \end{itemize}
+        \item Melting point.
+        \begin{itemize}
+            \item Strength: Can be measured to great precision.
+            \item Drawback: Takes a long time to measure.
+        \end{itemize}
+        \item IR spectroscopy.
+        \begin{itemize}
+            \item Strength: Can identify the presence or lack thereof of specific functional groups.
+            \item Drawback: It does not tell you \emph{how many} of each functional group you have.
+        \end{itemize}
+        \item Gravity filtration.
+        \begin{itemize}
+            \item Strength: Only very simple materials required.
+            \item Drawback: With hot filtrations, you can lose a lot of your desired compound due to temperature differences.
+        \end{itemize}
+        \item Vacuum filtration.
+        \begin{itemize}
+            \item Strength: Dries your precipitate even as it is separated.
+            \item Drawback: Loss of compound can occur from it splattering onto your gloves when you remove your hand from overtop.
+        \end{itemize}
+        \item Extraction.
+        \begin{itemize}
+            \item Strength: Can separate solvents based on density.
+            \item Drawback: It is an art; it is easy to shake too little or too much.
+        \end{itemize}
+        \item Rotavap concentration.
+        \begin{itemize}
+            \item Strength: Very fast evaporation.
+            \item Drawback: Loss can occur due to "bumping."
+        \end{itemize}
+        \item Recrystallization.
+        \begin{itemize}
+            \item Strength: Allowing compounds to naturally regrow can lead to very high purities.
+            \item Drawback: Requires very careful manipulation (e.g., don't cool too fast, don't disturb too much).
+        \end{itemize}
+        \item GC.
+        \begin{itemize}
+            \item Strength: Can analyze the purity of a substance.
+            \item Drawback: Cannot be performed by students in the lab.
+        \end{itemize}
+        \item Distillation.
+        \begin{itemize}
+            \item Strength: Scalable --- can be done in very large or very small quantities.
+            \item Drawback: Requires many resources (constant supply of cold water, constant supply of heat, etc.).
+        \end{itemize}
+        \item Column chromatography.
+        \begin{itemize}
+            \item Strength: Can separate compounds by polarity in large volumes.
+            \item Drawback: Requires a lot of solvent and necessitates rotavaping afterwards.
+        \end{itemize}
+        \item Polarimetry.
+        \begin{itemize}
+            \item Strength: Can differentiate between enantiomers.
+            \item Drawback: Susceptible to enantiomeric impurities (e.g., if the mixture is more racemic than we know, the value may be skewed even if its very high compound purity).
+        \end{itemize}
+    \end{enumerate}  
+\end{enumerate}
+\newpage
+
+
+
+\printbibliography
+
+
+
+
+\end{document}
