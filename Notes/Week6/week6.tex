@@ -48,11 +48,11 @@
             \chemfig{C(-[:120]H)(-[:150]H)(-[:-120]Cl)=C(-[:60]H)(-[:-20]H)(-[:-60]H)}
         \schemestop
         \chemmove{
-            \draw [shorten <=3pt,shorten >=3pt] (CC) to[bend left=90] (H);
-            \draw [shorten <=3pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Cl);
-            \draw [shorten <=6pt,shorten >=3pt] (Cl2) to[bend right=90] (C+);
+            \draw [rex,semithick,shorten <=3pt,shorten >=3pt] (CC) to[bend left=90] (H);
+            \draw [rex,semithick,shorten <=3pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Cl);
+            \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (Cl2) to[bend right=90] (C+);
         }
-        \caption{Mechanism of hydrohalogenation.}
+        \caption{Hydrohalogenation mechanism.}
         \label{fig:hydrohalogenation}
     \end{figure}
     \begin{itemize}
@@ -67,6 +67,204 @@
     \item \textbf{Hyperconjugation}: Adjacent \ce{C-H} bonding electrons donate electron density into vacant $p$ orbitals (of \ce{C+}), thus stabilizing the carbocation.
     \begin{itemize}
         \item Thus, alkyl groups are considered electron-donating groups because they delocalize positive charges through inductive effects.
+    \end{itemize}
+    \item \marginnote{11/4:}\textbf{Markovnikov addition}: The side of the alkene with more \ce{H}'s gets the \ce{H}.
+    \item Energy diagram of hydrohalogenation.
+    \begin{itemize}
+        \item Energy of the product is lower than the energy of the reactants (this is an exergonic reaction).
+        \item Energy of the intermediate is higher than either reactants or products.
+        \item The first transition state is higher energy than the second.
+        \item The first activation energy is significantly greater than the second (thus, the first step is slow).
+        \item Driving force: Thermodynamics --- more stable product. This makes sense since we're breaking one $\pi$ bond and one $\sigma$ bond and forming two $\sigma$ bonds, and $\sigma$ bonds are stronger than $\pi$ bonds.
+    \end{itemize}
+    \item Introduces methyl/hydride 1,2-shifts to form a more stable, more substituted carbocations.
+    \begin{itemize}
+        \item Is there enough of a driving force to go from a primary to a secondary carbocation, or a secondary to a tertiary carbocation, or is it just a primary to a tertiary carbocation?
+    \end{itemize}
+    \item Acid-catalyzed hydration.
+    \item General form:
+    \begin{equation*}
+        \ce{R-= + H2O ->[H2SO4] R-(-OH)-}
+    \end{equation*}
+    \item Mechanism:
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemname{\chemfig{H-\charge{90=\:,270=\:}{O}-S(=[2]\charge{[extra sep=1.5pt]45=\:,135=\:}{O})(=[6]\charge{[extra sep=1.5pt]-45=\:,-135=\:}{O})-@{O1}\charge{90=\:,270=\:}{O}-[@{sb}]@{H1}H}}{$\pKa=-5.2$}
+                \+
+                \chemfig{@{O2}\charge{90=\:,180=\:}{O}(-[6]H)-H}
+                \arrow{<->>}
+                \chemfig{H-\charge{90=\:,270=\:}{O}-S(=[2]\charge{[extra sep=1.5pt]45=\:,135=\:}{O})(=[6]\charge{[extra sep=1.5pt]-45=\:,-135=\:}{O})-\charge{0=\:,90=\:,270=\:,45:3pt=$\ominus$}{O}}
+                \+
+                \chemname{\chemfig{H-\charge{90=\:,45:3pt=$\oplus$}{O}(-[6]H)-H}}{$\pKa=-1.74$}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=5pt,shorten >=4pt] (O2) to[bend right=90,looseness=2] (H1);
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb) to[bend right=90,looseness=3] (O1);
+            }\\[2em]
+            \caption{Acid dissociation.}
+            \label{fig:acidCatalyzedHydrationa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]=_[@{db}:-30]}
+                \+
+                \chemfig{@{H2}H-[@{sb}]@{O2}\charge{90=\:,45:3pt=$\oplus$}{O}(-[6]H)-H}
+                \arrow{<=>}
+                \chemfig{R-[:30]\charge{90:3pt=$\oplus$}{}-[:-30]}
+                \+
+                \chemfig{\charge{90=\:,180=\:}{O}(-[6]H)-H}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=4pt] (db) to[bend left=60,looseness=1.3] (H2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (O2);
+            }
+            \caption{First step.}
+            \label{fig:acidCatalyzedHydrationb}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]@{CC+}\charge{90:3pt=$\oplus$}{}-[:-30]}
+                \+
+                \chemfig{@{O2}\charge{90=\:,180=\:}{O}(-[6]H)-H}
+                \arrow{<=>}
+                \chemname{\chemfig{R-[:30](-[2]\charge{90=\:,-45:3pt=$\oplus$}{O}(-[:30]H)(-[:150]H))-[:-30]}}{Oxonium ion}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=4pt] (O2) to[out=90,in=45] (CC+);
+            }
+            \caption{Second step.}
+            \label{fig:acidCatalyzedHydrationc}
+        \end{subfigure}
+    \end{figure}
+    \begin{figure}[H]
+        \ContinuedFloat
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](-[2]@{O1}\charge{90=\:,-45:3pt=$\oplus$}{O}(-[@{sb}:30]@{H1}H)(-[:150]H))-[:-30]}
+                \arrow{0}[,0]\+{,,-1em}
+                \chemfig{@{O2}\charge{90=\:,180=\:}{O}(-[6]H)-H}
+                \arrow{<->>}
+                \chemfig{R-[:30](-[2]\charge{0=\:,90=\:}{O}-[:150]H)-[:-30]-[:30]H}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=4pt] (O2) to[bend right=90,looseness=2] (H1);
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb) to[bend right=75,looseness=3] (O1);
+            }
+            \caption{Third step.}
+            \label{fig:acidCatalyzedHydrationd}
+        \end{subfigure}
+        \caption{Acid-catalyzed hydration mechanism.}
+        \label{fig:acidCatalyzedHydration}
+    \end{figure}
+    \begin{itemize}
+        \item Thus, the hydronium ion is a catalyst.
+        \item Same regioselectivity --- this is Markovnikov addition.
+        \item Same possibility for 1,2-shifts.
+        \item Racemic mixture of product since the carbocation is $sp^2$ planar and water has equal probability of attacking both faces.
+    \end{itemize}
+    \item Replacing \ce{H2O} with \ce{ROH}: Just replace \ce{OH} in the product with \ce{OR}.
+    \begin{itemize}
+        \item This is a way to make ethers.
+    \end{itemize}
+    \item Addition of \ce{X2} to alkenes (typically \ce{Br2} or \ce{Cl2}).
+    \item General form:
+    \begin{equation*}
+        \ce{= + X2 ->[CCl4] X---X}
+    \end{equation*}
+    \begin{itemize}
+        \item Generates the trans-product only, if there is a choice.
+        \item Thus, the reaction does not proceed through a carbocation mechanism.
+    \end{itemize}
+    \item Consider \ce{Br2} first.
+    \begin{itemize}
+        \item Each bromine is very electronegative.
+        \item Thus, the bond is weak since both atoms are fighting for electrons.
+        \item Think about \ce{Br2} as \ce{Br^+Br^-}.
+        \item Thus, \ce{Br2} is a very good electrophile.
+    \end{itemize}
+    \item Mechanism:
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{[:18]*5(-=[@{db}]---)}
+                \arrow{0}[,0]\+
+                \chemfig{@{Br2a}\charge{90=\:,180=\:,270=\:}{Br}-[@{sb}]@{Br2b}\charge{-90=\:,0=\:,90=\:}{Br}}
+                \arrow(--.west){<=>}
+                \chemfig{\charge{0=\:,90=\:,180=\:,270=\:,45:3pt=$\ominus$}{Br}}
+                \arrow{0}[,0]\+{1em,,1.2em}
+                \chemleft{[}
+                \subscheme{
+                    \chemfig{[:18]*5(-@{CC}\charge{-45:3pt=$\oplus$}{}-(<@{Br3}\charge{90=\:,0=\:,-90=\:}{Br})---)}
+                    \arrow{<->}
+                    \chemname{\chemfig{[:18]*5(-?-(<[@{wb}:-35]@{Br4}\charge{90=\:,-90=\:}{Br}?[,5])----)}}{Bromonium ion}
+                    \arrow{<->}
+                    \chemfig{[:18]*5(-(<\charge{-180=\:,-90=\:,0=\:}{Br})-\charge{45:3pt=$\oplus$}{}---)}
+                }
+                \chemright{]}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (db) to[out=-18,in=-120,in looseness=2] (Br2a);
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Br2b);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Br3) to[out=-90,in=0] (CC);
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (wb) to[out=55,in=90,looseness=3] (Br4);
+            }
+            \caption{First step.}
+            \label{fig:halogenationa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{[:162]*5(?(-[:-54]H)----@{C1}(<[:45,1.7,,,white,line width=3pt])(<[@{sb,0.7}:45,1.7]@{Br1}\charge{90=\:,-90=\:}{Br}?[,5])(-H)-)}
+                \arrow{0}[,0]\+
+                \chemfig{@{Br2}\charge{0=\:,90=\:,180=\:,270=\:,45:3pt=$\ominus$}{Br}}
+                \arrow
+                \chemfig{[:18]*5(-(<:\charge{0=\:,-90=\:,-180=\:}{Br})-(<\charge{-90=\:,0=\:,90=\:}{Br})---)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Br2) to[bend left=90,looseness=2] (C1);
+                \draw [rex,semithick,shorten <=3pt,shorten >=6pt] (sb) to[out=-45,in=-90,looseness=2.5] (Br1);
+            }
+            \vspace{1em}
+            \caption{Second step.}
+            \label{fig:halogenationb}
+        \end{subfigure}
+        \caption{Halogenation mechanism.}
+        \label{fig:halogenation}
+    \end{figure}
+    \begin{itemize}
+        \item Note that in the first step, the bromonium ion will be the major contributing structure because it satisfies the octet rule and it's symmetrical. This is why we show only it in the second step.
+        \item In the second step, because of the steric hindrance of the bromonium ion, the bromide ion engages in a "special attack" from the back side, resulting in the trans geometry. Note that it can attack either carbon, not just the one shown in Figure \ref{fig:halogenationb}.
+    \end{itemize}
+    \item When we use chlorine, the reaction proceeds through a chloronium ion.
+    \item Trapping the bromonium or chloronium ion.
+    \begin{itemize}
+        \item These ions can be trapped by \ce{H2O}, leading to a bromo/chloro-alcohol.
+        \begin{itemize}
+            \item This reaction is both regiospecific and stereospecific.
+            \item It proceeds through a mechanism that is the natural cross between the halogenation and acid-catalyzed hydration mechanism.
+        \end{itemize}
+    \end{itemize}
+    \item Take-home message: The more substituted carbon has more cationic character, so it tends to be attacked more by the nucleophile.
+    \item Oxymercuration.
+    \item General form:
+    \begin{equation*}
+        \ce{R-= ->[1. Hg(OAc)2, H2O][2. NaBH4] R-(-OH)-}
+    \end{equation*}
+    \begin{itemize}
+        \item \ce{NaBH4} is a very good hydrogen source.
+        \item The mechanism proceeds through a mercurinium ion that is trapped by water, and the resulting mercury acetate ligand is replaced with a hydride ligand by \ce{NaBH4}.
     \end{itemize}
 \end{itemize}
 
