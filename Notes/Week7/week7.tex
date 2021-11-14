@@ -1,0 +1,285 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{6}
+
+\begin{document}
+
+
+
+
+\chapter{Reactions of Alkynes}
+\section{Methods of Hydration}
+\begin{itemize}
+    \item \marginnote{11/9:}Mukaiyama Hydration.
+    \begin{itemize}
+        \item A "greener" method.
+    \end{itemize}
+    \item General form.
+    \begin{equation*}
+        \ce{R-= ->[Co(acac)2, O2][PhSiH3] R-(-OH)-}
+    \end{equation*}
+    \item Mechanism:
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \chemfig{Co?(-[:35]O=[::-35](-[::60])-[::-60]=_[::-60](-[::60])-[::-60]O?)(-[:215]O=[::-35](-[::60])-[::-60]=_[::-60](-[::60])-[::-60]O?)}
+            \caption{Cobalt catalyst.}
+            \label{fig:mukaiyamaHydrationa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]=_[:-30]}
+                \arrow{->[\footnotesize[\ce{Co-H}]]}[,1.3]
+                \chemfig{R-[:30](-[2]{[Co]})-[:-30]-[:30]H}
+                \arrow{->[\footnotesize\ce{O2}]}
+                \chemfig{R-[:30](-[2]O-[:30]O-[2]{[Co]})-[:-30]-[:30]H}
+                \arrow{->[\footnotesize\ce{PhSiH3}]}[,1.3]
+                \chemfig{R-[:30](-[2]OH)-[:-30]-[:30]H}
+            \schemestop
+            \caption{Mechanism.}
+            \label{fig:mukaiyamaHydrationb}
+        \end{subfigure}
+        \caption{Mukaiyama hydration mechanism.}
+        \label{fig:mukaiyamaHydration}
+    \end{figure}
+    \begin{itemize}
+        \item Note that \ce{Co(acac)2} is a catalyst.
+    \end{itemize}
+    \item Hydroboration/oxidation of alkene.
+    \begin{itemize}
+        \item Nobel Prize (1979).
+        \item Discovered by a UChicago undergrad, H. C. Brown.
+    \end{itemize}
+    \item General form.
+    \begin{equation*}
+        \ce{R-= ->[1. BH3][2. H2O2, NaOH] R---OH}
+    \end{equation*}
+    \begin{itemize}
+        \item Regioselective (anti-Markovnikov).
+        \item Stereospecific (\ce{H} and \ce{OH} add cis).
+        \item Covers \ce{BH3} with its empty $p$ orbital that makes it a good Lewis acid and dimerizes to \ce{B2H6} with its "3C-2e" bond in the gas phase.
+    \end{itemize}
+    \item Mechanism:
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]@{C1}=_[@{db}:-30]}
+                \+
+                \chemfig{H-[@{sb}]@{B2}B(<:[:20]H)(<[:-20]H)}
+                \arrow
+                \chemleft{[}
+                    \chemfig{R-[:30]@{C3a}\phantom{}?-[:-30,1.3]@{C3b}-[:60,1.1,,,dashed]B(<[:-20]H)(<:[:20]H)-[:150,0.9,,,dashed]H?[,,dashed]}
+                \chemright{]^\ddagger}
+                \arrow
+                \chemfig{R-[:30](-[2]H)-[:-30]-[:30]B(<:[:20]H)(<[:-20]H)}
+                % \arrow{->[\footnotesize 2 \chemfig[atom sep=1.4em]{R-[:30]=_[:-30]}]}[,1.5]
+                % \chemfig{@{R5}R-[:30]-[:-30]@{C5}-[:30]B}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db) to[out=-120,in=-90] (B2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb) to[out=90,in=90] (C1);
+                \draw [dashed,-] ([xshift=1pt,yshift=2pt]C3a.center) -- ([xshift=1pt,yshift=2pt]C3b.center);
+                % \path (R5) node[left]{$\bigg($} -- (C5) node[right]{$\bigg)_3$};
+            }
+            \caption{Part I.}
+            \label{fig:hydroborationa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]-[:-30]-[:30]@{B1}B-[:-30]@{C1}-[:30]-[:-30]@{R1}R}
+                \+{1.5em}
+                \chemfig{@{O2}\charge{90=\:,135:3pt=$\ominus$}{O}-O-H}
+                \arrow
+                \chemfig{R-[:30]-[:-30]-[@{sb1}:30]\charge{45:3pt=$\ominus$}{B}(-[2]@{O3a}O-[@{sb2}:30]@{O3b}O-[2]H)-[:-30]@{C3}-[:30]-[:-30]@{R3}R}
+                \arrow{->[][-\ce{OH-}]}
+                \chemfig{R-[:30]-[:-30]-[:30]O-[:-30]B-[:30]@{C4}-[:-30]-[:30]@{R4}R}
+            \schemestop
+            \chemmove{
+                \path (C1) node[left]{$\bigg($} -- (R1) node[right]{$\bigg)_2$};
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O2) to[out=90,in=90] (B1);
+                \path (C3) node[left]{$\bigg($} -- (R3) node[right]{$\bigg)_2$};
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb1) to[bend left=30] (O3a);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2) to[bend left=60,looseness=2] (O3b);
+                \path (C4) node[left]{$\bigg($} -- (R4) node[right]{$\bigg)_2$};
+            }
+            \caption{Part II: Oxidative cleavage of the \ce{B-C} bond.}
+            \label{fig:hydroborationb}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R{(}CH_2{)}_2O-[:30]@{B1}B-[:-30]{[}O{(}CH_2{)}_2R{]}_2}
+                \arrow{<->>[\footnotesize\chemfig[atom sep=1.4em]{@{O2}\charge{90=\:,135:3pt=$\ominus$}{O}-H}]}[,1.2]
+                \chemfig{R{(}CH_2{)}_2@{O3}O-[@{sb3}:30]\charge{45:3pt=$\ominus$}{B}(-[2]O-[:30]H)-[:-30]{[}O{(}CH_2{)}_2R{]}_2}
+                \arrow{<=>}
+                \chemfig{R{(}CH2{)}_2@{O4}\charge{90=\:,45:3pt=$\ominus$}{O}}
+                \+
+                \chemfig{@{H5}H-[@{sb5}]@{O5}O-B-{[}O{(}CH_2{)}_2R{]}_2}
+                \arrow{->}[-90]
+                \chemfig{R{(}CH2{)}_2OH}
+                \+
+                \chemfig{{(}\charge{45=$\oplus$}{Na}{)}\hspace{1em}\charge{135=$\ominus$}{O}-B-{[}O{(}CH_2{)}_2R{]}_2}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O2) to[bend right=90] (B1);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3) to[bend right=60,looseness=2] (O3);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[bend left=90,looseness=2] (H5);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb5) to[bend left=90,looseness=3] (O5);
+            }
+            \caption{Part III: Hydrolysis of boric acid ester.}
+            \label{fig:hydroborationc}
+        \end{subfigure}
+        \caption{Hydroboration mechanism.}
+        \label{fig:hydroboration}
+    \end{figure}
+    \begin{itemize}
+        \item The step in Part I is a concerted step (this is key for cis addition).
+        \item \ce{BH3} adds the way it does in part I (with the \ce{H} put on the more substituted carbon) due to sterics (bulky group attaches to the less bulky side) and electronics (the $\pi$-bonding electrons of the alkene connecting to the boron first will create a partial positive charge, and it is more stable to have that partial positive on the more substituted position).
+        \item The alkene does not attack an \ce{H} on \ce{BH3} because said \ce{H}'s are not acidic (it is the boron that is electron deficient).
+        \item Each part repeats an additional two times with the product of the $n^\text{th}$ run the reactant of the $(n+1)^\text{th}$ run to create the reactant of the next part.
+        \item In part II, mixing \ce{H2O2} with \ce{OH-} yields a deprotonated peroxide (\ce{O2H-}).
+        \item The final product of part II is the boric acid ester.
+        \item Part III has a borate salt as a final byproduct.
+        \item The mechanism implies that the hydrogen added comes from \ce{BH3}, and the oxygen added (as part of the hydroxide) comes from \ce{H2O2}.
+    \end{itemize}
+    \item If we add to an alkene borane, and then a strong acid and heat, we end up hydrogenating it.
+    \item Summary of alcohol synthesis:
+    \begin{itemize}
+        \item If you want Markovnikov addition, use\dots
+        \begin{itemize}
+            \item Acid-catalyzed hydration.
+            \item Oxymercuration/reduction.
+            \item Mukaiyama hydration.
+        \end{itemize}
+        \item If you want anti-Markovnikov addition, use\dots
+        \begin{itemize}
+            \item Hydroboration.
+        \end{itemize}
+    \end{itemize}
+    \item Ozonolysis of alkenes.
+    \begin{itemize}
+        \item An \textbf{oxidation} reaction (adding oxygen or removing hydrogen).
+        \item Treat an alkene with ozone and dimethyl sulfide to cleave the \ce{C=C} bond and add oxygen onto each carbon, forming carbonyls (and associated groups).
+        \item Note that if we consider the resonance structures of ozone, we will find that charger separation is unavoidable, i.e., that the molecule must have a plus and a minus charge somewhere. This makes it very reactive.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R>:[:70]@{C1}(<[:-70]H)=_[@{db1}2](<[:70]H)<:[:110]R}
+            \arrow{0}[,0.5]
+            \chemfig{@{O2a}\charge{0=\:,-90=\:,180=\:}{O}-[:60]@{O2b}\charge{0=\:}{O}=[@{db2}:120]@{O2c}\charge{[extra sep=1.5pt]45=\:,135=\:}{O}}
+            \arrow
+            \chemname{\chemfig[atom sep=3em]{*5((<:[:-150,0.7]R)(<[:-110,0.7]H)-[@{sb3a}]\charge{[extra sep=1.5pt]-45=\:,-135=\:}{O}-[@{sb3b}]@{O3b}\charge{[extra sep=1.5pt]45=\:,-45=\:}{O}-@{O3c}\charge{[extra sep=1.5pt]45=\:,135=\:}{O}-[@{sb3c}](<:[:150,0.7]R)(<[:110,0.7]H)-[@{sb3d}])}}{Molozonide}
+            \arrow
+            \chemfig{R-[:30]@{C4}(=[@{db4}2]@{O4}\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-[:-30]H}
+            \arrow{0}[,0]\+{,,-2em}
+            \chemfig{R-[:-30]@{C5}(=[@{db5}6]@{O5a}\charge{[extra sep=1.5pt]-45=\:}{O}-[:-150]@{O5b}\charge{90=\:,180=\:,-90=\:}{O})-[:30]H}
+            \arrow
+            \chemname{\chemfig[atom sep=3em]{[:18]*5(@{O6a}\charge{-90=\:,180=\:}{O}?-[@{sb6}]@{O6b}\charge{0=\:,-90=\:}{O}-(<:[:38,0.7]R)(<[:-2,0.7]H)-\charge{[extra sep=1.5pt]45=\:,135=\:}{O}-?(<[:182,0.7]H)(<:[:142,0.7]R))}}{Ozonide}
+            \arrow{->[*{0}{\chemfig[atom sep=1.4em]{-[:30]@{S7}\charge{90=\:,-90=\:}{S}-[:-30]}}]}[-90]
+            \chemfig{@{O8a}\charge{0=\:,-90=\:,180=\:,45:3pt=$\ominus$}{O}-[@{sb8a}2](<[:150]H)(<:[:110]R)-[@{sb8b}:30]\charge{[extra sep=1.5pt]45=\:,135=\:}{O}-[@{sb8c}:-30](<[:30]H)(<:[:70]R)-[@{sb8d}6]\charge{180=\:,-90=\:}{O}-[@{sb8e}:-30]\charge{90=\:,45:3pt=$\oplus$}{S}(-[6])-[:30]}
+            \arrow[180]
+            \subscheme{
+                \chemfig{H-[:-30](=[6]\charge{[extra sep=1.5pt]-45=\:,-135=\:}{O})-[:30]R}
+                \arrow{0}[,0]\+{,,2em}
+                \chemfig{H-[2](=[:150]\charge{90=\:,180=\:}{O})-[:30]R}
+                \arrow(.east--.160){0}[,0]\+{,,2em}
+                \chemname[-1em]{\chemfig{-[:30]\charge{-90=\:}{S}(=[2]\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-[:-30]}}{DMSO}
+            }
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1) to[bend right=30] (O2c);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db2) to[bend left=60,looseness=2.5] (O2b);
+            \draw [rex,semithick,shorten <=5pt,shorten >=4pt] (O2a) to[bend left=15] (C1);
+            %
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3d) to[bend left=30,looseness=1.2] (sb3a);
+            \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb3b) to[bend right=90,looseness=3] (O3b);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O3c) to[bend right=60,looseness=2] (sb3c);
+            %
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[out=45,in=90] (C5);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db5) to[bend left=60,looseness=2] (O5a);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O5b) to[out=180,in=-90,out looseness=2] (C4);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db4) to[bend left=60,looseness=2] (O4);
+            %
+            \draw [rex,semithick,shorten <=6pt,shorten >=6pt] (S7) to[out=90,in=0,in looseness=2] (O6b);
+            \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb6) to[bend left=90,looseness=3] (O6a);
+            %
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O8a) to[bend left=90,looseness=3] (sb8a);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb8b) to[bend right=60,looseness=1.5] (sb8c);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb8d) to[bend left=60,looseness=1.5] (sb8e);
+        }
+        \caption{Ozonolysis of alkenes.}
+        \label{fig:Ozonolysis}
+    \end{figure}
+    \begin{itemize}
+        \item The first step of the reaction is a concerted $3+2$ addition.
+        \item The ozonide intermediate is more stable than the molozonide owing to its symmetry.
+        \item Motivation for the last intermediate to split is eliminating charge separation.
+    \end{itemize}
+    \item Dihydroxylation of alkene (creation of a 1,2-diol).
+    \item General form.
+    \begin{equation*}
+        \ce{R-= ->[1. OsO4][2. NaHSO3] R-(-OH)--OH}
+    \end{equation*}
+    \begin{itemize}
+        \item Stereospecific (cis).
+        \begin{itemize}
+            \item Compare to bromination, which gives the trans-product (the difference is for mechanistic reasons).
+        \end{itemize}
+        \item The product is a 1,2-diol, or a vicinal diol.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \schemestart
+            \chemfig{R-[:-30]@{C1}=^[@{db1}6]}
+            \arrow(.-30--.180){0}[,0.5]
+            \chemfig{@{Os2}Os(=[1]O)(=[@{db2a}3]O)(=[@{db2b}5]@{O2}O)(=[7]O)}
+            \arrow
+            \chemname{\chemfig[atom sep=3em]{*5((<[:-80,0.7]H)(-[:-144,0.7]H)<:O-Os(=[1,0.7]O)(=[7,0.7]O)-O>:(<[:80,0.7]H)(-[,0.7]R)-)}}{Osmic ester}
+            \arrow{->[\ce{NaHSO3}]}[,1.4]
+            \chemfig{R-[:-30](-[:30]OH)-[6]-[:-30]OH}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db1) to[bend left=30,looseness=1.2] (O2);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db2b) to[bend left=60,looseness=2] (Os2);
+            \draw [rex,semithick,shorten <=3pt,shorten >=3pt] (db2a) to[out=-135,in=30] (C1);
+        }
+        \caption{Dihydroxylation.}
+        \label{fig:dihydroxylation}
+    \end{figure}
+    \begin{itemize}
+        \item The first step is concerted, once again.
+        \item Osmium gets reduced in the first step (oxidation number goes from $+8$ to $+6$).
+        \item In the second step, sodium bisulfite cleaves the two osmium oxygen bonds in a very complex process.
+    \end{itemize}
+    \item Problems: \ce{OsO4} is very expensive and very toxic.
+    \item Solutions:
+    \item UpJohn process (1976).
+    \begin{itemize}
+        \item The same as dihydroxylation but with only $1\%$ \ce{OsO4} and NMO (N-methylmorpholine oxide) and \ce{H2O} added second instead of \ce{NaHSO3}.
+    \end{itemize}
+    \item Sharpless asymmetric dihydroxylation.
+    \begin{itemize}
+        \item Nobel prize (2001).
+        \item Gives high ee for each product.
+        \item Conditions are catalytic potassium osmium salt (\ce{K2OsO2(OH)4}), potassium carbonate (\ce{K2CO3}), and potassium iron cyanate (\ce{K3Fe(CN)6}).
+    \end{itemize}
+    \item Alkene dihydrogenation.
+\end{itemize}
+
+
+
+
+\end{document}
