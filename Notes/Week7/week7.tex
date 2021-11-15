@@ -242,6 +242,7 @@
     \item Mechanism.
     \begin{figure}[H]
         \centering
+        \footnotesize
         \schemestart
             \chemfig{R-[:-30]@{C1}=^[@{db1}6]}
             \arrow(.-30--.180){0}[,0.5]
@@ -277,6 +278,273 @@
         \item Conditions are catalytic potassium osmium salt (\ce{K2OsO2(OH)4}), potassium carbonate (\ce{K2CO3}), and potassium iron cyanate (\ce{K3Fe(CN)6}).
     \end{itemize}
     \item Alkene dihydrogenation.
+    \item \marginnote{11/13:}General form:
+    \begin{equation*}
+        \ce{R-= ->[H2][cat. Pt] R--}
+    \end{equation*}
+    \begin{itemize}
+        \item A reduction reaction.
+        \item The catalyst can be \ce{Pd}, \ce{Ru}, \ce{Rh}, \ce{Ir}, etc.
+        \item This reaction happens on the solid surface of a metal catalyst.
+        \item Most of the time, this is cis-addition (as we can determine with deuterium labeling).
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Alkynes}
+\begin{itemize}
+    \item Review of bonding.
+    \begin{itemize}
+        \item Consider acetylene, or ethyne (\ce{H-C#C-H}).
+        \begin{itemize}
+            \item Bond angle $\ang{180}$.
+            \item Linear
+            \item $sp$ hybridization.
+            \item Orbital diagram (similar to homework 1.7b).
+        \end{itemize}
+        \item Driving force: Break weaker $\pi$ bonds.
+    \end{itemize}
+    \item IUPAC nomenclature.
+    \begin{itemize}
+        \item If there is a stereocenter, we need (R/S). If there is cis/trans, we need that, too.
+        \item Same rules as for alkenes except with "-yne."
+        \item No Z/E for alkyne.
+        \item Alkenes have higher priority than alkynes, e.g., we have but-1-ene-3-yne, not but-1-yne-3-ene.
+        \item Alkenes have higher priority than alkynes, have higher priority than halogens, e.g., we have 3-bromo-3-methyl-1-butyne.
+    \end{itemize}
+    \item Acidity of terminal alkynes.
+    \begin{itemize}
+        \item Recall that $sp$ hydrogens are more acidic than $sp^2$ hydrogens, are more acidic than $sp^3$ hydrogens (more $s$ character means that the charge on the conjugate base is held closer to the positive nucleus and thus stabilized better).
+        \item Indeed, \ce{R-C#C-H} is a reasonable Br\o nsted acid (it can react with a strong base).
+        \begin{itemize}
+            \item For example, acetylene and sodium amide react to establish an acid-base equilibrium to the right.
+        \end{itemize}
+        \item Take home message: Strong bases can remove hydrogen from terminal alkynes to give \ce{R-C#C^-}.
+        \item Two more strong bases (that can fully remove a hydrogen from a terminal alkyne): \ce{NaH} (sodium hydride) and LDA (lithium diisopropylamide).
+        \item \ce{NaOH} cannot remove a hydrogen from a terminal alkyne.
+    \end{itemize}
+    \item Reactions of alkynes.
+    \begin{itemize}
+        \item Tip: Learn alkyne reactions simply by making an analogy to an alkene reaction.
+    \end{itemize}
+    \item Hydrohalogenation.
+    \vspace{2em}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-~[@{CC}]-H}
+                \+
+                \chemfig{@{H}H-[@{sb}]@{Cl}\charge{-90=\:,0=\:,90=\:}{Cl}}
+                \arrow{<=>}
+                \chemfig{R-[:30]@{C+}\charge{135:3pt=$\oplus$}{}=_[:-30](-[:30]H)(-[6]H)}
+                \+
+                \chemfig{@{Cl2}\charge{0=\:,90=\:,180=\:,270=\:,45:3pt=$\ominus$}{Cl}}
+                \arrow
+                \chemfig{R-[:30](-[2]Cl)=_[:-30](-[:30]H)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=5pt,shorten >=3pt] (CC) to[bend left=90,looseness=1.5] (H);
+                \draw [rex,semithick,shorten <=3pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Cl);
+                \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (Cl2) to[bend right=90] (C+);
+            }
+            \caption{One equivalent \ce{HBr}.}
+            \label{fig:hydrohalogenationAlkynea}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](-[2]Cl)=^[@{CC}:-30]}
+                \arrow{0}[,0]\+{1em,1em}
+                \chemfig{@{H}H-[@{sb}]@{Cl}\charge{-90=\:,0=\:,90=\:}{Cl}}
+                \arrow{<=>}
+                \chemfig{R-[:30]@{C+}\charge{135:3pt=$\oplus$}{}(-[2]Cl)-[:-30](-[:30]H)}
+                \arrow{0}[,0]\+{1em,1em}
+                \chemfig{@{Cl2}\charge{0=\:,90=\:,180=\:,270=\:,45:3pt=$\ominus$}{Cl}}
+                \arrow
+                \chemfig{R-[:30](-[:70]Cl)(-[:110]Cl)-[:-30](-[:30]H)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=4pt,shorten >=3pt] (CC) to[bend left=60,looseness=1.2] (H);
+                \draw [rex,semithick,shorten <=3pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Cl);
+                \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (Cl2) to[bend right=50] (C+);
+            }
+            \caption{Another equivalent \ce{HBr}.}
+            \label{fig:hydrohalogenationAlkyneb}
+        \end{subfigure}
+        \caption{Hydrohalogenation mechanism (alkynes).}
+        \label{fig:hydrohalogenationAlkyne}
+    \end{figure}
+    \begin{itemize}
+        \item Two equivalents of \ce{HBr} yields a \textbf{geminal dichloride}.
+        \item Still Markovnikov addition.
+        \item If we wanted to form a viscinal (or 1,2-) dichloride, we would use chlorination, but if we want to form the geminal chloride, we must start with an alkyne.
+    \end{itemize}
+    \item Halogenation.
+    \begin{itemize}
+        \item Similarly, one equivalent yields a trans alkene.
+        \item Two equivalents yield a tetrahalo alkyne.
+    \end{itemize}
+    \item Acid-catalyzed hydration.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-~-H}
+            \arrow{->[\ce{H2SO4}, \ce{H2O}][cat. \ce{HgSO4}]}[,2]
+            \chemfig{R-[:30](-[2]OH)=_[:-30](-[6]H)-[:30]H}
+            \arrow{<->>}
+            \chemfig{R-[:30](=[2]O)-[:-30](-[6]H)(<[:-10]H)(<:[:30]H)}
+        \schemestop
+        \caption{Hydration mechanism (alkynes).}
+        \label{fig:hydrationAlkyne}
+    \end{figure}
+    \begin{itemize}
+        \item For an alkyne, we need a more forcing condition. In particular, we will add catalytic \ce{HgSO4}.
+        \item After running once, we will form an enol.
+        \begin{itemize}
+            \item Enols are unstable and undergo enol-keto tautomerizations, forming a ketone.
+            \item If we are asked to draw the products of this reaction, draw \emph{only} the ketone.
+            \item The tautomerization favors the ketone for thermodynamic reasons: The ketone is more stable (by about $\SI{15}{\kilo\calorie\per\mole}$), and the \ce{O-H} and \ce{C-H} bonds have similar BDEs.
+        \end{itemize}
+        \item This is Markovnikov.
+        \item A good method for ketone synthesis: Alkyne to ketone.
+        \item We do not need to know the mechanism because the introduction of the mercury catalyst goes beyond this class.
+        \item Know, however, that alkyne hydration requires a more forcing condition because alkynes' hybridization leads to tighter holding of electrons relative to alkenes. Thus, we say that alkenes are more electron rich.
+        \item There are some alternative greener methods, but we will not cover them.
+    \end{itemize}
+    \item Hydroboration.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+                \schemestart
+                \chemfig{R-~-R'}
+                \arrow{->[\ce{BH3}]}
+                \chemfig{@{R}R-[:30](-[2]H)=_[:-30]@{C}(-[6]R')-[:30]B}
+                \arrow{->[\ce{NaOH}][\ce{H2O2}]}[,1.2]
+                \chemfig{R-[:30](-[2]H)=_[:-30](-[6]R')-[:30]OH}
+                \arrow{<->>}
+                \chemfig{R-[:30](-[:70]H)(-[:110]H)-[:-30](-[6]R')=^[:30]O}
+            \schemestop
+            \chemmove{
+                \path (R) node[left,yshift=1mm]{$\left(\rule{0cm}{1.2cm}\right.$} -- (C) node[right,yshift=1mm]{$\left.\rule{0cm}{1.2cm}\right)_3$};
+            }
+            \vspace{1em}
+            \caption{Alkyne hydroboration.}
+            \label{fig:hydroborationAlkynea}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+                \schemestart
+                \chemfig{R-~}
+                \arrow{->[\ce{BH3}]}
+                \chemfig{@{R}R-[:30](-[2]H)=_[:-30]@{C}-[:30]B}
+                \arrow{->[\ce{BH3}]}
+                \chemfig{R-[:30]-[:-30](-[:30]B(-[::60]!{wave})(-[::-60]!{wave}))(-[6]B(-[::60]!{wave})(-[::-60]!{wave}))}
+            \schemestop
+            \chemmove{
+                \path (R) node[left,yshift=5mm]{$\left(\rule{0cm}{8mm}\right.$} -- (C) node[right,yshift=5mm]{$\left.\rule{0cm}{8mm}\right)_3$};
+            }
+            \caption{Over hydroboration.}
+            \label{fig:hydroborationAlkyneb}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+                \schemestart
+                \chemfig{R-~}
+                \arrow{->[\ce{(sia)2BH}]}[,1.4]
+                \chemfig{R-[:30](-[2]H)=_[:-30]-[:30]B{(sia)}_2}
+                \arrow{->[\ce{NaOH}][\ce{H2O2}]}[,1.2]
+                \chemfig{R-[:30](-[2]H)=_[:-30]-[:30]OH}
+                \arrow
+                \chemfig{R-[:30](-[:70]H)(-[:110]H)-[:-30]=^[:30]O}
+            \schemestop
+            \caption{Solving over hydroboration.}
+            \label{fig:hydroborationAlkynec}
+        \end{subfigure}
+        \caption{Hydroboration mechanism (alkynes).}
+        \label{fig:hydroborationAlkyne}
+    \end{figure}
+    \begin{itemize}
+        \item Three equivalent of the reactant go through at once to form three equivalents of the product.
+        \item The product results from typical hydroboration cis-addition followed by the keto-enol tautomerization.
+        \item The \ce{R$'$} group in the normal hydroboration prevents boron from adding to the alkene again via steric hindrance.
+        \item We can solve over hydroboration by using \ce{(sia)2B-H} instead of \ce{BH3}, which only works one molecule at a time and is too bulky for over hydroboration.
+        \begin{itemize}
+            \item The sia ligand is sec-isoamyl (5 carbons, prong at the end, bonds through the second carbon along the tail).
+            \item The full name of \ce{(sia)2BH} is di-sec-iso-amylborane.
+        \end{itemize}
+    \end{itemize}
+    \item Three ways to make ketones:
+    \begin{enumerate}
+        \item Ozonolysis of alkenes.
+        \item Acid-catalyzed hydration of alkynes.
+        \item Hydroboration of alkynes.
+    \end{enumerate}
+    \item Reduction (hydrogenation).
+    \begin{itemize}
+        \item The reaction is hard to stop at the alkene if we use catalytic platinum and hydrogen.
+        \item To stop at the alkene stage, we can use a Lindlar catalyst (has some \ce{Pd}, \ce{CaCO3}, and \ce{PbO}).
+        \begin{itemize}
+            \item A \textbf{poisoned catalyst} that does not have the same reactivity as platinum. It can bind with the alkyne, but not the alkene.
+        \end{itemize}
+        \item Alternatively, we can use \ce{Ni2Br}.
+        \item We can get the trans product with a special condition called dissolving metal reduction.
+        \begin{equation*}
+            \ce{R-#-R$'$ ->[2 Na][2 NH3] \emph{trans-}R-=-R$'$ + 2NaNH2}
+        \end{equation*}
+        \begin{figure}[h!]
+            \centering
+            \footnotesize
+            \schemestart
+                \chemfig{R-@{C1a}~[@{db1}]@{C1b}-R'}
+                \arrow{->[\chemfig{@{Na2}\charge{180=\.}{Na}}]}
+                \chemfig{\charge{45:3pt=$\oplus$}{Na}}
+                \arrow{0}[,0]\+{1em,,-2.8em}
+                \chemleft{[}\subscheme{
+                    \chemfig{R-\charge{90=\.}{C}=@{C3}\charge{90=\:,45:3pt=$\ominus$}{C}-R'}
+                    \arrow{<->}[-90]
+                    \chemfig{R-\charge{90=\:,135:3pt=$\ominus$}{C}=\charge{90=\.}{C}-R'}
+                }\chemright{]}
+                \arrow{->[\chemfig{@{H5}H-[@{sb5}]@{N5}\charge{90=\:}{N}H_2}][-\ce{NaNH2}]}[,1.6]
+                \chemfig{R-@{C6}\charge{90=\.}{C}=C(-[:60]H)(-[:-60]R')}
+                \arrow{->[*{0}\chemfig{@{Na7}\charge{90=\.}{Na}}]}[-90]
+                \subscheme{
+                    \chemfig{\charge{45:3pt=$\oplus$}{Na}}
+                    \arrow{0}[,0]\+{1em,,-2.4em}
+                    \chemfig{R-[:-60]@{C9}\charge{[extra sep=1.5pt]-135=\:,45:3pt=$\ominus$}{C}=C(-[:60]H)(-[:-60]R')}
+                }
+                \arrow{->[*{0.-90}\chemfig{@{H10}H-[@{sb10}]@{N10}\charge{90=\:}{N}H_2}][*{0.90}-\ce{NaNH2}]}[180,1.6]
+                \chemfig{R-[:-60](-[:-120]H)=(-[:60]H)(-[:-60]R')}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=4pt,arrows={-Stealth[harpoon]}] (Na2) to[out=180,in=80,in looseness=2] (C1b);
+                \draw [rex,semithick,shorten <=4pt,shorten >=4pt,arrows={-Stealth[harpoon,swap]}] (db1) to[bend left=80,looseness=5] (C1b);
+                \draw [rex,semithick,shorten <=4pt,shorten >=4pt,arrows={-Stealth[harpoon,swap]}] (db1) to[bend right=80,looseness=5] (C1a);
+                %
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (C3) to[out=90,in=90,looseness=1.5] (H5);
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb5) to[bend left=90,looseness=4] (N5);
+                %
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (Na7) to[out=90,in=-90] (C6);
+                %
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (C9) to[out=-135,in=-60,out looseness=2] ++(-0.6,0) to[out=120,in=90,out looseness=1.2] (H10);
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb10) to[bend left=90,looseness=4] (N10);
+            }
+            \caption{Monohydrogenation of an alkyne.}
+            \label{fig:hydrogenationAlkyne}
+        \end{figure}
+        \begin{itemize}
+            \item Dissolve two equivalents of sodium in \ce{NH3}.
+            \item Stereospecific (trans).
+            \item Sodium is very electropositive, a single electron donor. On the other hand, the alkyne is electron poor.
+            \item We favor the trans intermediate for steric reasons.
+        \end{itemize}
+    \end{itemize}
 \end{itemize}
 
 
