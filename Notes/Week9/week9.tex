@@ -1,0 +1,159 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{8}
+
+\begin{document}
+
+
+
+
+\chapter{Nucleophilic Substitutions and Elimination}
+\section{Nucleophilic Substitutions (cont.)}
+\begin{itemize}
+    \item \marginnote{11/30:}Choosing between the mechanisms (cont.).
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Solvent.
+        \begin{itemize}
+            \item Critical for borderline cases.
+            \item The solvent is important for dissolving things/providing an environment for the reaction.
+            \item There are two types of solvents: \textbf{protic} and \textbf{aprotic}.
+            \item We need to know all of the common solvents (a table will be uploaded).
+            \item Key difference between protic and aprotic solvents.
+            \begin{itemize}
+                \item Protic solvents can do hydrogen bonding with anions (LGs), stabilizing them.
+                \item Aprotic solvents cannot do this.
+            \end{itemize}
+            \item Protic solvents can stabilize \ce{X-}, easing the self-ionization step in S\textsubscript{N}1.
+            \item Protic solvents stabilize both the nucleophile and LG in S\textsubscript{N}2.
+            \begin{itemize}
+                \item With the nucleophile retarded, the rate of S\textsubscript{N}2 goes down.
+            \end{itemize}
+            \item In an aprotic solvent, the nucleophile is even more reactive.
+            \item Take-home message: For secondary alkyl halides (the borderline cases), protic solvents promote S\textsubscript{N}1 and aprotic solvents promote S\textsubscript{N}2.
+        \end{itemize}
+    \end{enumerate}
+    \item \textbf{Protic} (solvent): A solvent with an acidic proton.
+    \item \textbf{Aprotic} (solvent): A solvent without an acidic proton.
+    \item If you see a nucleophilic substitution-type reaction with just one compound surrounding the arrow, assume it is both the nucleophile \emph{and} the solvent.
+    \item \textbf{Allylic} (carbocation): A carbocation on a carbon adjacent to an alkene.
+    \begin{itemize}
+        \item Extra stable due to resonance stabilization.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section[\texorpdfstring{$\beta$}{TEXT}-Elimination]{\texorpdfstring{$\bm{\beta}$}{TEXT}-Elimination}
+\begin{itemize}
+    \item $\beta$-elimination is a form of dehydrohalogenation.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \schemestart
+            \chemfig{\charge{45:1pt=\tiny${\color{rex}\beta}$}{C}(-[2]H)(-[4])(-[6])-\charge{45:1pt=\tiny${\color{rex}\alpha}$}{C}(-[2])(-)(-[6]X)}
+            \arrow{->[base (\ce{B-})]}[,1.3]
+            \chemfig{C(-[3])(-[5])=C(-[1])(-[7])}
+            \+
+            \chemfig{HB}
+            \+
+            \chemfig{\ce{X-}}
+        \schemestop
+    \end{center}
+    \item Mechanisms.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{(-[:120])(-[:-120])(-[:-160])-[@{sb1}]@{Br1}Br}
+                \arrow{->[][-\ce{Br-}]}
+                \chemfig{\charge{-45:3pt=$\oplus$}{}(-[:120])(-[:-120])-[@{sb2a}]-[@{sb2b}:60]@{H2}H}
+                \arrow{->[\chemfig[atom sep=1.4em]{H-[1]@{O3}\charge{[extra sep=1.5pt]45=\:,135=\:}{O}-[7]Et}][-\ce{EtOH2}]}[,1.5]
+                \chemfig{(-[:120])(-[:-120])=}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb1) to[bend left=90,looseness=3] (Br1);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O3) to[bend right=45,looseness=1.2] (H2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2b) to[bend right=60,looseness=1.7] (sb2a);
+            }
+            \caption{E1.}
+            \label{fig:eliminationa}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{@{B1}\charge{0=\:,45:3pt=$\ominus$}{B}}
+                \arrow{0}[,0.5]
+                \chemfig{(-[@{sb2a}:120]@{H2}H)(<[:-120]\ce{R^3})(<:[:-160]\ce{R^4})-[@{sb2b}](<:[:60]\ce{R^1})(<[:20]\ce{R^2})(-[@{sb2c}:-60]@{X2}X)}
+                \arrow
+                \chemfig{(-[:120]\ce{R^4})(-[:-120]\ce{R^3})=(-[:60]\ce{R^1})(-[:-60]\ce{R^2})}
+                \+
+                \chemfig{HB}
+                \+
+                \chemfig{\charge{45:3pt=$\ominus$}{X}}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (B1) to[out=0,in=135,looseness=1.5] (H2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2a) to[bend left=60,looseness=1.7] (sb2b);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2c) to[bend right=60,looseness=1.7] (X2);
+            }
+            \caption{E2.}
+            \label{fig:eliminationb}
+        \end{subfigure}
+        \caption{Elimination mechanisms.}
+        \label{fig:elimination}
+    \end{figure}
+    \item \textbf{E1}: Unimolecular elimination.
+    \begin{itemize}
+        \item Not a clean reaction --- E1 and S\textsubscript{N}1 often happen together.
+        \item They will not ask us to tell which pathway is more favored.
+        \item Features.
+        \begin{enumerate}
+            \item Tertiary alkyl halides are favored (secondary sometimes).
+            \item Protic solvents are needed.
+            \item We need a weak base/poor nucleophile.
+            \item Selectivity: Determined by the alkene stability; we favor forming the more stable alkene (as per \textbf{Zaitsev's Rule}).
+        \end{enumerate}
+        \item E1 is not a useful reaction to prepare alkenes from alkyl halides since we get a mixture of products and there are selectivity issues.
+    \end{itemize}
+    \item \textbf{Zaitsev's Rule}: More substituted alkenes are more stable.
+    \begin{itemize}
+        \item For secondary carbons, $\text{cis}<\text{trans}<\text{geminal}$ in terms of stability.
+        \item Since $sp^2$ is more electronegative than $sp^3$ and \ce{R} is an EDG, more \ce{R} groups can provide more electrons to stabilize the $sp^2$ carbons.
+    \end{itemize}
+    \item \textbf{E2}: Bimolecular elimination.
+    \begin{itemize}
+        \item Often very selective, and you can make it very selective.
+        \begin{itemize}
+            \item The lack of a carbocation intermediate and the fact that it's a concerted mechanism both contribute to the higher yield.
+        \end{itemize}
+        \item In order to realize E2, the conformation \emph{must} adopt \textbf{anti-periplanar geometry}.
+        \begin{itemize}
+            \item E2 is a stereospecific reaction.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Anti-periplanar geometry}: Two groups of importance are opposite each other and lie in the same plane.
+    \begin{itemize}
+        \item Consider the \ce{H} and \ce{X} in Figure \ref{fig:eliminationb}.
+    \end{itemize}
+    \item Example: Consider \emph{cis}-1-chloro-2-isopropylcyclohexane in solution with \ce{MeONa} and \ce{MeOH}.
+    \begin{itemize}
+        \item Only the more stable cyclohexane conformation (with \ce{Cl} axial and \ce{Pr^{$i$}} equatorial) has hydrogens anti to the chlorine.
+        \item Both of these hydrogens will undergo E2 elimination with the chlorine, and the trisubstituted product will be the major product (as per Zaitsev's rule).
+        \item However, if we use $t$-butoxide instead of methoxide, the disubstituted product would be the major product due to sterics.
+    \end{itemize}
+    \item Example: Consider \emph{trans}-1-chloro-2-isopropylcyclohexane in solution with \ce{MeONa} and \ce{MeOH}.
+    \begin{itemize}
+        \item Since the less stable conformation is the reactive one, the reaction will still go, but it will be very slow.
+    \end{itemize}
+    \item Take-home summary: For E2, the first priority is anti-periplanar, and then Zaitsev.
+\end{itemize}
+
+
+
+
+\end{document}
