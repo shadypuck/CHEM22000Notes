@@ -3,10 +3,12 @@
 \usepackage{fancyhdr}
 \usepackage{marginnote}
 \usepackage{enumitem}
+\usepackage{xr}
 \usepackage{siunitx}
 \usepackage[style=chem-acs]{biblatex}
 \usepackage{pdfpages}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{bm}
 \usepackage{tikz,graphicx}
 \usepackage{subcaption,float}
 \usepackage{mhchem,chemmacros}
@@ -29,6 +31,8 @@
 \reversemarginpar
 
 \setlist[itemize,3]{label={\scriptsize$\blacksquare$}}
+
+\externaldocument{notes}
 
 \DeclareSIUnit{\angstrom}{\textup{\AA}}
 \DeclareSIUnit{\debye}{D}

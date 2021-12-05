@@ -1,0 +1,208 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{7}
+
+\begin{document}
+
+
+
+
+\chapter{Nucleophilic Substitutions}
+\section{Nucleophilic Substitutions}
+\begin{itemize}
+    \item \marginnote{11/18:}Philosophy of learning mechanisms (the most difficult and important part of organic chemistry to understand):
+    \begin{itemize}
+        \item The origin is the structure, which determines the reactivity of the reagent, which determines the mechanism.
+    \end{itemize}
+    \item In this chapter, we consider \textbf{haloalkanes} or \textbf{alkyl halides}.
+    \begin{itemize}
+        \item Alkyl halides have polar bonds.
+        \item The electropositive carbon center is key for attracting electrons from nucleophiles or other things.
+    \end{itemize}
+    \item Nucleophilic substitution.
+    \item General form.
+    \begin{equation*}
+        \ce{Nu- + R-X -> Nu-R + X-}
+    \end{equation*}
+    \begin{itemize}
+        \item The nucleophile (\ce{Nu-}) attacks the electrophile (\ce{R-X}), generating the product (\ce{Nu-R}) and leaving group or LG (\ce{X-}).
+        \item Motivation: Stability --- \ce{X-} is more stable than \ce{Nu-}.
+        \item We can use this to perform a wide variety of coupling reactions (coupling \ce{R} to \ce{Nu-}) given a good leaving group.
+        \begin{itemize}
+            \item For example, generating methanol from hydroxide and bromomethane.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanisms.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{@{Nu1}\charge{0=\:,45:3pt=$\ominus$}{Nu}}
+                \arrow{0}[,0.5]
+                \chemfig{@{C2}(-[@{sb2}]@{X2}\charge{90=\:,0=\:,-90=\:}{X})(-[:120])(<[:-120])(<:[:-160])}
+                \arrow
+                \chemleft{[}
+                    \chemfig{Nu-[,,,,dash pattern=on 2pt off 2pt]C(-[2])(<[:-70])(<:[:-110])-[,,,,dash pattern=on 2pt off 2pt]X}
+                \chemright{]^\ddagger}
+                \arrow
+                \chemfig{Nu-(-[:60])(<[:-60])(<:[:-20])}
+                \+
+                \chemfig{\charge{0=\:,90=\:,180=\:,270=\:,45:3pt=$\ominus$}{X}}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=4pt] (Nu1) to[out=0,in=150] (C2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb2) to[bend left=90,looseness=3] (X2);
+            }
+            \caption{\ce{S_{N}2}.}
+            \label{fig:nucleophilicSubsa}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{C(-[@{sb1}]@{X1}\charge{90=\:,0=\:,-90=\:}{X})(-[:120])(<[:-120])(<:[:-160])}
+                \arrow{<=>[solvent]}[,1.3]
+                \chemfig{\charge{0=\:,90=\:,180=\:,270=\:,45:3pt=$\ominus$}{X}}
+                \+
+                \chemfig{@{C2}\charge{45:3pt=$\oplus$}{C}(-[2])(<[:-70])(<:[:-110])}
+                \arrow{->[\chemfig{@{Nu4}\charge{180=\:}{Nu}}]}[,1.3]
+                \chemfig{Nu-(-[:60])(<[:-60])(<:[:-20])}
+                \+
+                \chemfig{Nu-[4](-[:120])(<[:-120])(<:[:-160])}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb1) to[bend left=90,looseness=3] (X1);
+            }
+            \caption{\ce{S_{N}1}.}
+            \label{fig:nucleophilicSubsb}
+        \end{subfigure}
+        \caption{Nucleophilic substitution mechanisms.}
+        \label{fig:nucleophilicSubs}
+    \end{figure}
+    \item \textbf{\ce{S_{N}2}}: Bimolecular nucleophilic substitution. \emph{Also known as} \textbf{backside attack}.
+    \begin{itemize}
+        \item Bimolecular refers to the number of reactants in the rate-determining step.
+        \item Compare to the opening of the bromonium ion (see Figure \ref{fig:halogenationb}).
+        \item The backside attack breaks the carbon-halogen bond by pumping electrons into the large lobe of the $\sigma^*$ antibonding orbital on the back side of the carbon.
+        \item Mechanism type.
+        \begin{itemize}
+            \item Concerted, as per the energy diagram.
+        \end{itemize}
+        \item Rate law.
+        \begin{equation*}
+            r = R[\ce{Nu-}][\ce{RX}]
+        \end{equation*}
+        \begin{itemize}
+            \item First-order dependence on both the nucleophile and alkyl halide.
+        \end{itemize}
+        \item Stereochemistry.
+        \begin{itemize}
+            \item Flips.
+            \item Stereoinversion (as opposed to stereoretention).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{\ce{S_{N}1}}: Unimolecular nucleophilic substitution.
+    \begin{itemize}
+        \item Unimolecular refers to the number of reactants in the rate-determining step.
+        \item Initiated by a \textbf{sloppy electrophile}.
+        \item Since it still take a lot of energy to break the \ce{C-X} bond, the first step is the RDS.
+        \item Gives a racemic mixture of products since the nucleophile can attack the carbocation intermediate from either face.
+        \item Mechanism type.
+        \begin{itemize}
+            \item Stepwise, as per the energy diagram.
+        \end{itemize}
+        \item Rate law.
+        \begin{equation*}
+            r = R[\ce{RX}]
+        \end{equation*}
+        \begin{itemize}
+            \item Zeroeth-order dependence on the nucleophile; first-order dependence on the alkyl halide.
+        \end{itemize}
+        \item Stereochemistry.
+        \begin{itemize}
+            \item Racemic.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Sloppy electrophile}: An electrophile that can undergo a self-ionization reaction.
+    \item Key requirement: Predict whether a reaction proceeds through an \ce{S_{N}1} or \ce{S_{N}2} mechanism.
+    \begin{itemize}
+        \item Experimentally, we can do\dots
+        \begin{itemize}
+            \item Kinetic/rate law studies.
+            \item Stereochemical analyses.
+        \end{itemize}
+        \item For the exam, we need to be able to predict based off of the reactants and conditions.
+    \end{itemize}
+    \item Choosing between the mechanisms.
+    \item The general form has four variables/parameters.
+    \begin{enumerate}
+        \item Structure of the nucleophile.
+        \begin{itemize}
+            \item A good nucleophile has electron pairs that are "held loosely."
+            \item Trend:
+            \begin{itemize}
+                \item Nucleophilicity of elements in the same period.
+                \begin{equation*}
+                    \ce{F-} < \ce{OH-} < \ce{NH2-} < \ce{CH3-}
+                \end{equation*}
+                \item Nucleophilicity of elements in the same group.
+                \begin{gather*}
+                    \ce{MeO-} < \ce{MeS-}\\
+                    \ce{Me2O-} < \ce{Me2S-}\\
+                    \ce{F-} < \ce{Cl-} < \ce{Br-} < \ce{I-}
+                \end{gather*}
+                \item Nucleophilicity of the same element.
+                \begin{gather*}
+                    \ce{MeOH} < \ce{MeO-}\\
+                    \ce{H-OH} < \ce{H-O-}
+                \end{gather*}
+                \item Nucleophilicity of species with differently sized ligands.
+                \begin{equation*}
+                    \ce{Bu^{$t$}-O-} < \ce{MeO-}
+                \end{equation*}
+            \end{itemize}
+            \item Basically, elements that are more positive, less electronegative, and larger (i.e., more basic) hold electron pairs more loosely. Sterically hindered bases are also less nucleophilic because they're too bulky to attack (linear nucleophiles are often the best).
+            \item Take-home message: A good nucleophile favors \ce{S_{N}2}.
+        \end{itemize}
+        \item Structure of the \ce{R} group.
+        \begin{itemize}
+            \item Tertiary alkyl halides.
+            \begin{itemize}
+                \item Backside is blocked.
+                \item Carbocation is stable.
+                \item \ce{S_{N}1} is favored.
+            \end{itemize}
+            \item Primary alkyl halides.
+            \begin{itemize}
+                \item Backside is wide open.
+                \item Carbocation is unstable.
+                \item \ce{S_{N}2} is favored.
+            \end{itemize}
+            \item For \ce{S_{N}2} reactions, sterics matter (affect the rate) a lot.
+            \begin{itemize}
+                \item Neopentyl alkyl halides block \ce{S_{N}2} reactions.
+            \end{itemize}
+            \item Secondary alkyl halides.
+            \begin{itemize}
+                \item Case-by-case analysis.
+            \end{itemize}
+        \end{itemize}
+        \item Leaving group.
+        \begin{itemize}
+            \item Important for both \ce{S_{N}1} and \ce{S_{N}2} reactions.
+            \item Good leaving groups are stable, weak bases.
+            \begin{equation*}
+                \ce{I-} > \ce{Br-} > \ce{Cl-} > \ce{F-}
+            \end{equation*}
+            \item These raise the reaction rate.
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+
+
+
+\end{document}
