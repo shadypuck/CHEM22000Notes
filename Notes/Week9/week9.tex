@@ -135,6 +135,7 @@
         \begin{itemize}
             \item E2 is a stereospecific reaction.
         \end{itemize}
+        \item A bulky base (such as \ce{Bu^{$t$}O-}) is preferred since such a base reduces competition from S\textsubscript{N}2.
     \end{itemize}
     \item \textbf{Anti-periplanar geometry}: Two groups of importance are opposite each other and lie in the same plane.
     \begin{itemize}
@@ -151,6 +152,137 @@
         \item Since the less stable conformation is the reactive one, the reaction will still go, but it will be very slow.
     \end{itemize}
     \item Take-home summary: For E2, the first priority is anti-periplanar, and then Zaitsev.
+    \item \marginnote{12/6:}Deciding between S\textsubscript{N}2 and E2 in secondary cases.
+    \begin{itemize}
+        \item When you have a strong base, E2 is favored.
+        \begin{itemize}
+            \item Examples: \ce{OH-}, \ce{MeO-}, \ce{EtO-}, \ce{Bu^{$t$}O-}.
+        \end{itemize}
+        \item When you have a good nucleophile that is not too basic, S\textsubscript{N}2 is favored.
+        \begin{itemize}
+            \item Examples: \ce{Br-}, \ce{I-}, \ce{RS-}, \ce{N#C-}, \ce{N3-}, \ce{PPh3}.
+        \end{itemize}
+    \end{itemize}
+    \item Deciding between E2 and E1/S\textsubscript{N}1.
+    \begin{itemize}
+        \item For E2, the role of the base is critical --- without a strong base, it will not take place.
+        \item For E1, the role of the base is not important; ionization is more important.
+        \item Since ionization is a very slow process, if there is competition between E2 and E1 and a strong base is present, E2 will usually win out because it's so much faster.
+        \item Primary alkyl halides lead to E2 only.
+        \item Secondary and tertiary alkyl halides lead to E2 in the presence of a strong base, and E1/S\textsubscript{N}1 in the presence of a weak base/solvent.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Alkyl Halide Equivalents}
+\begin{itemize}
+    \item Other species that can behave with the above chemistry.
+    \item Consider the following sulfonate ester.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R-O-S(=[2]O)(=[6]O)-*6(=-=(-CH_3)-=-)}
+        \caption{A sulfonate ester.}
+        \label{fig:sulfonateEster}
+    \end{figure}
+    \begin{itemize}
+        \item Often abbreviated \ce{OTs} and called tosylate.
+    \end{itemize}
+    \item This species is important because we can make it from alcohols with stereoretension.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{\ce{R^1}-[:30](<[2]OH)-[:-30]\ce{R^2}}
+            \arrow{->[\ce{TsCl}][\chemfig[atom sep=1.4em]{*6(=N-=-=-)}]}[,1.3]
+            \chemfig{\ce{R^1}-[:30](<[2]OTs)-[:-30]\ce{R^2}}
+        \schemestop
+        \caption{Making tosylate species.}
+        \label{fig:tosylateSpecies}
+    \end{figure}
+    \begin{itemize}
+        \item The species below the arrow above is called pyridine and is often abbreviated Py.
+        \item The mechanism of the above reaction is not needed.
+    \end{itemize}
+    \item You can then hit the product in Figure \ref{fig:tosylateSpecies} with a nucleophile to perform S\textsubscript{N}2.
+    \item Note that like \ce{RX}, \ce{ROTs} can also undergo $\beta$-elimination (such as E2).
+\end{itemize}
+
+
+
+\section{Alkyne Synthesis}
+\begin{itemize}
+    \item You can form alkynes from simpler alkynes, alkenes, and ketones (though we don't have to know the last one for this class).
+    \item Alkylation of acetylides with \ce{RX} via S\textsubscript{N}2.
+    \begin{equation*}
+        \ce{H-C#C-H ->[1. NaNH2][2. R-Br] H-C#C-R ->[1. NaNH2][2. R$'$-Br] R$'$-C#C-R}
+    \end{equation*}
+    \begin{itemize}
+        \item Start with an acetylide such as \ce{NaC#C-H}.
+        \item React it with an alkyl bromide (\ce{RBr}) in THF to attach it to that alkyl species at the former bromium site with inverted stereochemistry (yielding \ce{RC#C-H} and \ce{NaBr}).
+        \item React the terminal alkyne species with a strong base (e.g., \ce{NaH}, \ce{NaNH2}, \ce{LDA}) to generate a species such as \ce{NaC#CR}.
+        \item React this with another alkyl bromide (\ce{R$'$Br}) to yield the final \ce{RC#CR$'$} species.
+    \end{itemize}
+    \item \textbf{Synthesis}: Making a large and more useful molecule from readily available small molecules.
+    \begin{itemize}
+        \item Using alkynes is a very important approach to make carbon-carbon bonds.
+    \end{itemize}
+    \item From alkenes.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-CH=CH-R'}
+                \arrow{->[\ce{Br2}]}
+                \chemfig{R-C(-[2]H)(-[6]Br)-C(-[2]Br)(-[6]H)-R'}
+                \arrow{->[\ce{2NaNH2}]}[,1.4]
+                \chemfig{R-C~C-R'}
+            \schemestop
+            \caption{Internal alkene.}
+            \label{fig:alkyneAlkeneSynthesisa}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-CH=CH_2}
+                \arrow{->[\ce{Br2}]}
+                \chemfig{R-C(-[2]H)(-[6]Br)-C(-[2]Br)(-[6]H)-H}
+                \arrow{->[\ce{3NaNH2}]}[,1.4]
+                \chemfig{R-C~CNa}
+                \arrow{->[\ce{H2O}]}
+                \chemfig{R-C~C-H}
+            \schemestop
+            \caption{Terminal alkene.}
+            \label{fig:alkyneAlkeneSynthesisb}
+        \end{subfigure}
+        \caption{Synthesis of alkynes from alkenes.}
+        \label{fig:alkyneAlkeneSynthesis}
+    \end{figure}
+    \begin{itemize}
+        \item The elimination mechanism for the two pairs of \ce{HBr} in Figure \ref{fig:alkyneAlkeneSynthesisa} is different from E1 and E2, and we do not need to know it.
+        \item In Figure \ref{fig:alkyneAlkeneSynthesisb}, we need the third equivalent of base in the second step because once an alkyne species is formed, its acidic proton will react with any base in solution. Thus, if we used only two equivalents, some of the reactant would get converted all of the way to the \ce{R-C#CNa} species, and some would not get converted at all. Therefore, we push all of the reactant to be converted, and then work with the product, quenching with \ce{H2O} to get our final desired product.
+        \item Note that various byproducts are generated that are not shown (they are the predictable ones, though).
+        \item We can also use chloride here.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Multi-Step Synthesis}
+\begin{itemize}
+    \item These problems are the core of organic chemistry, using both our imagination and our knowledge to construct \emph{a} right answer (there are often more than one).
+    \item Tip: Think backwards!
+    \begin{itemize}
+        \item Formally, "retro-synthetic analysis," as coined by E. J. Corey, a Nobel laureate at Harvard.
+    \end{itemize}
+    \item Example: Construct cyclohexane-1,2-diol from cyclohexanol.
+    \begin{equation*}
+        \ce{C6H11OH ->[TsCl, Py] C6H11OTs ->[Bu^{$t$}O-][-Bu^{$t$}OH, OTs-] C6H10 ->[1. OsO4][2. NaHSO3] C6H10(OH)2}
+    \end{equation*}
+    \item More examples given.
 \end{itemize}
 
 
