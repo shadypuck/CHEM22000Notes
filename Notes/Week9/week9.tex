@@ -16,6 +16,31 @@
     \begin{enumerate}
         \setcounter{enumi}{3}
         \item Solvent.
+        \begin{table}[h!]
+            \centering
+            \small
+            \renewcommand{\arraystretch}{1.6}
+            \begin{tabular}{lc}
+                \textbf{Solvent} & \textbf{Structure}\\
+                \hline
+                \emph{Polar}\\
+                Dimethyl sulfoxide (DMSO) & \chemfig{CH_3SCH_3=[2,,3]O}\\
+                Acetonitrile & \chemfig{CH_3C~N}\\
+                N,N-Dimethylformamide (DMF)\rule{0pt}{1.3cm} & \chemfig{HCN{(}CH_3{)}=[2,,2]O}\\
+                Acetone\rule{0pt}{1.3cm} & \chemfig{CH_3CCH_3=[2,,3]O}\\
+                \hline
+                \emph{Moderately polar}\\
+                Dichloromethane & \ce{CH2Cl2}\\
+                Tetrahydrofuran (THF)\rule{0pt}{1.1cm} & \chemfig{*5(--O---)}\\
+                \hline
+                \emph{Nonpolar}\\
+                Diethyl ether & \ce{CH3CH2OCH2CH3}\\
+                Toluene\rule{0pt}{0.8cm} & \chemfig{[:-30]*6(=-=(-CH_3)-=-)}\\
+                Hexane\rule{0pt}{0.6cm} & \ce{CH3(CH2)4CH3}
+            \end{tabular}
+            \caption{Common aprotic solvents.}
+            \label{tab:aproticSolvents}
+        \end{table}
         \begin{itemize}
             \item Critical for borderline cases.
             \item The solvent is important for dissolving things/providing an environment for the reaction.
@@ -50,7 +75,8 @@
 \begin{itemize}
     \item $\beta$-elimination is a form of dehydrohalogenation.
     \item General form.
-    \begin{center}
+    \begin{figure}[h!]
+        \centering
         \footnotesize
         \schemestart
             \chemfig{\charge{45:1pt=\tiny${\color{rex}\beta}$}{C}(-[2]H)(-[4])(-[6])-\charge{45:1pt=\tiny${\color{rex}\alpha}$}{C}(-[2])(-)(-[6]X)}
@@ -61,7 +87,9 @@
             \+
             \chemfig{\ce{X-}}
         \schemestop
-    \end{center}
+        \caption{Elimination.}
+        \label{fig:eliminationForm}
+    \end{figure}
     \item Mechanisms.
     \begin{figure}[h!]
         \centering
@@ -153,6 +181,28 @@
     \end{itemize}
     \item Take-home summary: For E2, the first priority is anti-periplanar, and then Zaitsev.
     \item \marginnote{12/6:}Deciding between S\textsubscript{N}2 and E2 in secondary cases.
+    \begin{table}[H]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{r|l}
+            \multirow{4}{*}{Good} & \ce{Br-}, \ce{I-}\\
+             & \ce{CH3S-}, \ce{RS-}\\
+             & \ce{HO-}, \ce{CH3O-}, \ce{RO-}, \ce{R-C#C-}\\
+             & \ce{CN-}, \ce{N3-}, \ce{H2N}-\\
+            \hline
+            \multirow{4}{*}{Moderate} & \ce{Cl-}, \ce{F-}\\
+             & \ce{CH3COO-}, \ce{RCOO-}\\
+             & \ce{CH3SH}, \ce{RSH}, \ce{R2S}\\
+             & \ce{NaHSO3}, \ce{RNH2}, \ce{R2NH}, \ce{R3N}\\
+            \hline
+            \multirow{3}{*}{Poor} & \ce{H2O}\\
+             & \ce{CH3OH}, \ce{ROH}\\
+             & \ce{CH3COOH}, \ce{RCOOH}\\
+        \end{tabular}
+        \caption{Nucleophilicities in alcohol or water.}
+        \label{tab:nucleophileStrength}
+    \end{table}
     \begin{itemize}
         \item When you have a strong base, E2 is favored.
         \begin{itemize}
@@ -229,7 +279,7 @@
         \item Using alkynes is a very important approach to make carbon-carbon bonds.
     \end{itemize}
     \item From alkenes.
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \footnotesize
         \begin{subfigure}[b]{\linewidth}
