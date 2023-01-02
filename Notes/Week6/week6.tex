@@ -31,7 +31,7 @@
     \begin{itemize}
         \item This involves arrow pushing.
     \end{itemize}
-    \item Know Table 6.1 from the textbook.
+    \item Know Table 6.1 from the textbook (carbon-halogen bond lengths and bond strengths).
     \item \textbf{Hydrohalogenation}: Addition of \ce{H-X} across a \ce{C=C} double bond.
     \begin{figure}[h!]
         \centering
@@ -101,6 +101,7 @@
                 \+
                 \chemname{\chemfig{H-\charge{90=\:,45:3pt=$\oplus$}{O}(-[6]H)-H}}{$\pKa=-1.74$}
             \schemestop
+            \chemnameinit{}
             \chemmove{
                 \draw [rex,semithick,shorten <=5pt,shorten >=4pt] (O2) to[bend right=90,looseness=2] (H1);
                 \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb) to[bend right=90,looseness=3] (O1);
@@ -135,6 +136,7 @@
                 \arrow{<=>}
                 \chemname{\chemfig{R-[:30](-[2]\charge{90=\:,-45:3pt=$\oplus$}{O}(-[:30]H)(-[:150]H))-[:-30]}}{Oxonium ion}
             \schemestop
+            \chemnameinit{}
             \chemmove{
                 \draw [rex,semithick,shorten <=6pt,shorten >=4pt] (O2) to[out=90,in=45] (CC+);
             }
@@ -173,7 +175,7 @@
     \end{itemize}
     \item Replacing \ce{H2O} with \ce{ROH}: Just replace \ce{OH} in the product with \ce{OR}.
     \begin{itemize}
-        \item This is a way to make ethers.
+        \item This is a way to make ethers. More on this third quarter.
     \end{itemize}
     \item Addition of \ce{X2} to alkenes (typically \ce{Br2} or \ce{Cl2}).
     \item General form:
@@ -181,7 +183,7 @@
         \ce{= + X2 ->[CCl4] X---X}
     \end{equation*}
     \begin{itemize}
-        \item Generates the trans-product only, if there is a choice.
+        \item Generates the \emph{trans}-product only, if there is a choice.
         \item Thus, the reaction does not proceed through a carbocation mechanism.
     \end{itemize}
     \item Consider \ce{Br2} first.
@@ -214,6 +216,7 @@
                 }
                 \chemright{]}
             \schemestop
+            \chemnameinit{}
             \chemmove{
                 \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (db) to[out=-18,in=-120,in looseness=2] (Br2a);
                 \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Br2b);
@@ -245,7 +248,7 @@
     \end{figure}
     \begin{itemize}
         \item Note that in the first step, the bromonium ion will be the major contributing structure because it satisfies the octet rule and it's symmetrical. This is why we show only it in the second step.
-        \item In the second step, because of the steric hindrance of the bromonium ion, the bromide ion engages in a "special attack" from the back side, resulting in the trans geometry. Note that it can attack either carbon, not just the one shown in Figure \ref{fig:halogenationb}.
+        \item In the second step, because of the steric hindrance of the bromonium ion, the bromide ion engages in a "special attack" from the back side, resulting in the \emph{trans} geometry. Note that it can attack either carbon, not just the one shown in Figure \ref{fig:halogenationb}.
     \end{itemize}
     \item When we use chlorine, the reaction proceeds through a chloronium ion.
     \item Trapping the bromonium or chloronium ion.
@@ -263,7 +266,7 @@
         \ce{R-= ->[1. Hg(OAc)2, H2O][2. NaBH4] R-(-OH)-}
     \end{equation*}
     \begin{itemize}
-        \item \ce{NaBH4} is a very good hydrogen source.
+        \item \ce{NaBH4} is a very good hydrogen source (more on this second and third quarter).
         \item The mechanism proceeds through a mercurinium ion that is trapped by water, and the resulting mercury acetate ligand is replaced with a hydride ligand by \ce{NaBH4}.
         \item No possibility for hydride/methyl shifts.
     \end{itemize}

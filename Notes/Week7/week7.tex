@@ -146,7 +146,7 @@
         \item \ce{BH3} adds the way it does in part I (with the \ce{H} put on the more substituted carbon) due to sterics (bulky group attaches to the less bulky side) and electronics (the $\pi$-bonding electrons of the alkene connecting to the boron first will create a partial positive charge, and it is more stable to have that partial positive on the more substituted position).
         \item The alkene does not attack an \ce{H} on \ce{BH3} because said \ce{H}'s are not acidic (it is the boron that is electron deficient).
         \item Each part repeats an additional two times with the product of the $n^\text{th}$ run the reactant of the $(n+1)^\text{th}$ run to create the reactant of the next part.
-        \item In part II, mixing \ce{H2O2} with \ce{OH-} yields a deprotonated peroxide (\ce{O2H-}).
+        \item In part II, mixing \ce{H2O2} with \ce{OH-} yields a deprotonated peroxide (\ce{HO2-}).
         \item The final product of part II is the boric acid ester.
         \item Part III has a borate salt as a final byproduct.
         \item The mechanism implies that the hydrogen added comes from \ce{BH3}, and the oxygen added (as part of the hydroxide) comes from \ce{H2O2}.
@@ -169,7 +169,7 @@
     \begin{itemize}
         \item An \textbf{oxidation} reaction (adding oxygen or removing hydrogen).
         \item Treat an alkene with ozone and dimethyl sulfide to cleave the \ce{C=C} bond and add oxygen onto each carbon, forming carbonyls (and associated groups).
-        \item Note that if we consider the resonance structures of ozone, we will find that charger separation is unavoidable, i.e., that the molecule must have a plus and a minus charge somewhere. This makes it very reactive.
+        \item Note that if we consider the resonance structures of ozone, we will find that charge separation is unavoidable, i.e., that the molecule must have a plus and a minus charge somewhere. This makes it very reactive.
     \end{itemize}
     \item Mechanism.
     \begin{figure}[h!]
@@ -178,13 +178,13 @@
         \schemestart
             \chemfig{R>:[:70]@{C1}(<[:-70]H)=_[@{db1}2](<[:70]H)<:[:110]R}
             \arrow{0}[,0.5]
-            \chemfig{@{O2a}\charge{0=\:,-90=\:,180=\:}{O}-[:60]@{O2b}\charge{0=\:}{O}=[@{db2}:120]@{O2c}\charge{[extra sep=1.5pt]45=\:,135=\:}{O}}
+            \chemfig{@{O2a}\charge{0=\:,-90=\:,180=\:,-45:3pt=$\ominus$}{O}-[:60]@{O2b}\charge{0=\:,180:3pt=$\oplus$}{O}=[@{db2}:120]@{O2c}\charge{[extra sep=1.5pt]45=\:,135=\:}{O}}
             \arrow
             \chemname{\chemfig[atom sep=3em]{*5((<:[:-150,0.7]R)(<[:-110,0.7]H)-[@{sb3a}]\charge{[extra sep=1.5pt]-45=\:,-135=\:}{O}-[@{sb3b}]@{O3b}\charge{[extra sep=1.5pt]45=\:,-45=\:}{O}-@{O3c}\charge{[extra sep=1.5pt]45=\:,135=\:}{O}-[@{sb3c}](<:[:150,0.7]R)(<[:110,0.7]H)-[@{sb3d}])}}{Molozonide}
             \arrow
             \chemfig{R-[:30]@{C4}(=[@{db4}2]@{O4}\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-[:-30]H}
             \arrow{0}[,0]\+{,,-2em}
-            \chemfig{R-[:-30]@{C5}(=[@{db5}6]@{O5a}\charge{[extra sep=1.5pt]-45=\:}{O}-[:-150]@{O5b}\charge{90=\:,180=\:,-90=\:}{O})-[:30]H}
+            \chemfig{R-[:-30]@{C5}(=[@{db5}6]@{O5a}\charge{[extra sep=1.5pt]-45=\:,135:3pt=$\oplus$}{O}-[:-150]@{O5b}\charge{90=\:,180=\:,-90=\:,-45:3pt=$\ominus$}{O})-[:30]H}
             \arrow
             \chemname{\chemfig[atom sep=3em]{[:18]*5(@{O6a}\charge{-90=\:,180=\:}{O}?-[@{sb6}]@{O6b}\charge{0=\:,-90=\:}{O}-(<:[:38,0.7]R)(<[:-2,0.7]H)-\charge{[extra sep=1.5pt]45=\:,135=\:}{O}-?(<[:182,0.7]H)(<:[:142,0.7]R))}}{Ozonide}
             \arrow{->[*{0}{\chemfig[atom sep=1.4em]{-[:30]@{S7}\charge{90=\:,-90=\:}{S}-[:-30]}}]}[-90]
@@ -198,6 +198,7 @@
                 \chemname[-1em]{\chemfig{-[:30]\charge{-90=\:}{S}(=[2]\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-[:-30]}}{DMSO}
             }
         \schemestop
+        \chemnameinit{}
         \chemmove{
             \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1) to[bend right=30] (O2c);
             \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db2) to[bend left=60,looseness=2.5] (O2b);
@@ -208,9 +209,9 @@
             \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O3c) to[bend right=60,looseness=2] (sb3c);
             %
             \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[out=45,in=90] (C5);
-            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db5) to[bend left=60,looseness=2] (O5a);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db5) to[bend left=60,looseness=2] (O5a);
             \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O5b) to[out=180,in=-90,out looseness=2] (C4);
-            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db4) to[bend left=60,looseness=2] (O4);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db4) to[bend left=60,looseness=2] (O4);
             %
             \draw [rex,semithick,shorten <=6pt,shorten >=6pt] (S7) to[out=90,in=0,in looseness=2] (O6b);
             \draw [rex,semithick,shorten <=2pt,shorten >=6pt] (sb6) to[bend left=90,looseness=3] (O6a);
@@ -233,9 +234,9 @@
         \ce{R-= ->[1. OsO4][2. NaHSO3] R-(-OH)--OH}
     \end{equation*}
     \begin{itemize}
-        \item Stereospecific (cis).
+        \item Stereospecific (\emph{cis}).
         \begin{itemize}
-            \item Compare to bromination, which gives the trans-product (the difference is for mechanistic reasons).
+            \item Compare to bromination, which gives the \emph{trans}-product (the difference is for mechanistic reasons).
         \end{itemize}
         \item The product is a 1,2-diol, or a vicinal diol.
     \end{itemize}
@@ -252,6 +253,7 @@
             \arrow{->[\ce{NaHSO3}]}[,1.4]
             \chemfig{R-[:-30](-[:30]OH)-[6]-[:-30]OH}
         \schemestop
+        \chemnameinit{}
         \chemmove{
             \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db1) to[bend left=30,looseness=1.2] (O2);
             \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db2b) to[bend left=60,looseness=2] (Os2);
@@ -280,13 +282,13 @@
     \item Alkene dihydrogenation.
     \item \marginnote{11/13:}General form:
     \begin{equation*}
-        \ce{R-= ->[H2][cat. Pt] R--}
+        \ce{R-= ->[H2][\text{cat. }Pt] R--}
     \end{equation*}
     \begin{itemize}
         \item A reduction reaction.
         \item The catalyst can be \ce{Pd}, \ce{Ru}, \ce{Rh}, \ce{Ir}, etc.
         \item This reaction happens on the solid surface of a metal catalyst.
-        \item Most of the time, this is cis-addition (as we can determine with deuterium labeling).
+        \item Most of the time, this is \emph{cis}-addition (as we can determine with deuterium labeling).
     \end{itemize}
 \end{itemize}
 
@@ -299,7 +301,7 @@
         \item Consider acetylene, or ethyne (\ce{H-C#C-H}).
         \begin{itemize}
             \item Bond angle $\ang{180}$.
-            \item Linear
+            \item Linear.
             \item $sp$ hybridization.
             \item Orbital diagram (similar to homework 1.7b).
         \end{itemize}
@@ -307,9 +309,9 @@
     \end{itemize}
     \item IUPAC nomenclature.
     \begin{itemize}
-        \item If there is a stereocenter, we need (R/S). If there is cis/trans, we need that, too.
+        \item If there is a stereocenter, we need (R/S). If there is \emph{cis}/\emph{trans}, we need that, too.
         \item Same rules as for alkenes except with "-yne."
-        \item No Z/E for alkyne.
+        \item No E/Z for alkynes.
         \item Alkenes have higher priority than alkynes, e.g., we have but-1-ene-3-yne, not but-1-yne-3-ene.
         \item Alkenes have higher priority than alkynes, have higher priority than halogens, e.g., we have 3-bromo-3-methyl-1-butyne.
     \end{itemize}
@@ -351,7 +353,7 @@
                 \draw [rex,semithick,shorten <=3pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Cl);
                 \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (Cl2) to[bend right=90] (C+);
             }
-            \caption{One equivalent \ce{HBr}.}
+            \caption{One equivalent \ce{HCl}.}
             \label{fig:hydrohalogenationAlkynea}
         \end{subfigure}\\[2em]
         \begin{subfigure}[b]{\linewidth}
@@ -372,20 +374,20 @@
                 \draw [rex,semithick,shorten <=3pt,shorten >=6pt] (sb) to[bend left=90,looseness=3] (Cl);
                 \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (Cl2) to[bend right=50] (C+);
             }
-            \caption{Another equivalent \ce{HBr}.}
+            \caption{Another equivalent \ce{HCl}.}
             \label{fig:hydrohalogenationAlkyneb}
         \end{subfigure}
         \caption{Hydrohalogenation mechanism (alkynes).}
         \label{fig:hydrohalogenationAlkyne}
     \end{figure}
     \begin{itemize}
-        \item Two equivalents of \ce{HBr} yields a \textbf{geminal dichloride}.
+        \item Two equivalents of \ce{HCl} yields a \textbf{geminal dichloride}.
         \item Still Markovnikov addition.
-        \item If we wanted to form a viscinal (or 1,2-) dichloride, we would use chlorination, but if we want to form the geminal chloride, we must start with an alkyne.
+        \item If we wanted to form a viscinal (or 1,2-) dichloride, we would use chlorination of an alkene, but if we want to form the geminal chloride, we must start with an alkyne.
     \end{itemize}
     \item Halogenation.
     \begin{itemize}
-        \item Similarly, one equivalent yields a trans alkene.
+        \item Similarly, one equivalent yields a \emph{trans} alkene.
         \item Two equivalents yield a tetrahalo alkyne.
     \end{itemize}
     \item Acid-catalyzed hydration.
@@ -412,7 +414,7 @@
         \end{itemize}
         \item This is Markovnikov.
         \item A good method for ketone synthesis: Alkyne to ketone.
-        \item We do not need to know the mechanism because the introduction of the mercury catalyst goes beyond this class.
+        \item We do not need to know the mechanism because the introduction of the mercury catalyst goes beyond this class; it will be covered third quarter, though.
         \item Know, however, that alkyne hydration requires a more forcing condition because alkynes' hybridization leads to tighter holding of electrons relative to alkenes. Thus, we say that alkenes are more electron rich.
         \item There are some alternative greener methods, but we will not cover them.
     \end{itemize}
@@ -472,7 +474,7 @@
     \end{figure}
     \begin{itemize}
         \item Three equivalent of the reactant go through at once to form three equivalents of the product.
-        \item The product results from typical hydroboration cis-addition followed by the keto-enol tautomerization.
+        \item The product results from typical hydroboration \emph{cis}-addition followed by the keto-enol tautomerization.
         \item The \ce{R$'$} group in the normal hydroboration prevents boron from adding to the alkene again via steric hindrance.
         \item We can solve over hydroboration by using \ce{(sia)2B-H} instead of \ce{BH3}, which only works one molecule at a time and is too bulky for over hydroboration.
         \begin{itemize}
@@ -494,7 +496,7 @@
             \item A \textbf{poisoned catalyst} that does not have the same reactivity as platinum. It can bind with the alkyne, but not the alkene.
         \end{itemize}
         \item Alternatively, we can use \ce{Ni2Br}.
-        \item We can get the trans product with a special condition called dissolving metal reduction.
+        \item We can get the \emph{trans} product with a special condition called dissolving metal reduction.
         \begin{equation*}
             \ce{R-#-R$'$ ->[2 Na][2 NH3] \emph{trans-}R-=-R$'$ + 2NaNH2}
         \end{equation*}
@@ -540,9 +542,9 @@
         \end{figure}
         \begin{itemize}
             \item Dissolve two equivalents of sodium in \ce{NH3}.
-            \item Stereospecific (trans).
-            \item Sodium is very electropositive, a single electron donor. On the other hand, the alkyne is electron poor.
-            \item We favor the trans intermediate for steric reasons.
+            \item Stereospecific (\emph{trans}).
+            \item Sodium is very electropositive, a single-electron donor. On the other hand, the alkyne is electron poor.
+            \item We favor the \emph{trans} intermediate for steric reasons.
         \end{itemize}
     \end{itemize}
 \end{itemize}

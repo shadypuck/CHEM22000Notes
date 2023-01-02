@@ -37,7 +37,7 @@
         \item Goes through a number of examples.
         \item Acetonitrile is a strong polar solvent.
     \end{itemize}
-    \item \textbf{Functional group}: A common arrangement that determines shape, bonding physical and reactivity of organic compounds.
+    \item \textbf{Functional group}: A common arrangement that determines the shape, bonding, physical properties, and reactivity of organic compounds.
     \item Families of carbon compounds:
     \begin{itemize}
         \item Hydrocarbons: Aliphatic, aromatic.
@@ -67,7 +67,7 @@
             \item Acid anhydride: \ce{R-COOCO-R$'$}.
         \end{itemize}
         \item Nitrile: \ce{R-C#N}.
-        \item Acrylonitrile: \ce{=-C#N}.
+        \item Acrylonitrile (compound, not a group): \ce{=-C#N}.
     \end{itemize}
 \end{itemize}
 
@@ -89,7 +89,7 @@
     \item As the mole fraction $\chi$ of a substance \ce{A} increases\dots
     \item Raoult's law:
     \begin{equation*}
-        P_\text{total} = \frac{P_A\chi_A}{P_B\chi_B} = \frac{P_A\chi_A}{P_B(1-\chi_A)}
+        P_\text{total} = \frac{p_A^{}\chi_A^{}}{p_B^{}\chi_B^{}} = \frac{p_A^{}\chi_A^{}}{p_B^{}(1-\chi_A^{})}
     \end{equation*}
     \item Dalton's law: The total pressure is equal to the sum of the partial pressures.
 \end{itemize}
@@ -152,7 +152,7 @@
         \item Anything above 1500 (of wavenumber less than 1500) is called the \textbf{fingerprint region} --- it may not tell you what a molecule is, but it will tell you if two molecules are the same.
         \item Sharp peaks at high wavenumbers are characteristic of \ce{N-H} interactions.
         \item Make a line at $\SI{3000}{\per\centi\meter}$. Things to the right of that indicate aliphatic \ce{C-H}'s. Things to the left indicate $sp^2$ \ce{C-H} groups. Things more to the left indicate $sp$ \ce{C-H} groups.
-        \item Not all bonds are visible --- stretching bands must change the dipole. Thus, for example, the \ce{C=H} stretch in trans-but-2-ene is not IR active, but the \ce{C=H} stretch in cis-but-2-ene is IR active.
+        \item Not all bonds are visible --- stretching bands must change the dipole. Thus, for example, the \ce{C=C} stretch in \emph{trans}-but-2-ene is not IR active, but the \ce{C=C} stretch in \emph{cis}-but-2-ene is IR active.
         \item If you want to substitute \ce{D} for \ce{H}, the peak formerly associated with the \ce{R-H} bond will move lower.
     \end{itemize}
     \begin{table}[h!]
@@ -167,7 +167,7 @@
             \ce{C=O} & $\sim\SI{1710}{\per\centi\meter}$ (shifts to $\sim\SI{1735}{\per\centi\meter}$ for esters)\\ \hline
             \ce{C#C} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
             \ce{C#N} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
-            \ce{C-H} (aldehyde) & Two peaks at $\SI{2170}{\per\centi\meter}$ and $\SI{2810}{\per\centi\meter}$\\ \hline
+            \ce{C-H} (aldehyde) & Two peaks at $\SI{2710}{\per\centi\meter}$ and $\SI{2810}{\per\centi\meter}$\\ \hline
             $sp^3$ \ce{C-H} & Just to the right of $\SI{3000}{\per\centi\meter}$\\ \hline
             $sp^2$ \ce{C-H} & Just to the left of $\SI{3000}{\per\centi\meter}$\\ \hline
             $sp$ \ce{C-H} & $\sim\SI{3300}{\per\centi\meter}$\\ \hline
@@ -200,6 +200,13 @@
        \Ka &= \frac{[\ce{A-}][\ce{H3O+}]}{[\ce{HA}]}
     \end{align*}
     \item Note that $[\ce{H2O}]=\SI{55.5}{\molar}$.
+    \begin{itemize}
+        \item Derived from the density of water:
+        \begin{equation*}
+            \frac{\SI{1}{\gram}}{\SI{1}{\milli\liter}} = \frac{\SI{1000}{\gram}}{\SI{1}{\liter}}\times\frac{\SI{1}{\mole}}{\SI{18.02}{\gram}}
+            = \frac{\SI{55.5}{\mole}}{\SI{1}{\liter}}
+        \end{equation*}
+    \end{itemize}
     \item $\pKa=-\log\Ka$ gives numbers that are easier to work with.
     \begin{itemize}
         \item The larger the $\pKa$, the weaker the acid.
@@ -232,14 +239,14 @@
             &= \text{p}K_{\text{a}_2}-\text{p}K_{\text{a}_1}\\
             K_\text{eq} &= 10^{\Delta\pKa}
         \end{align*}
-        so for any acid-base reaction, the position of the equilibrium can be predicted from the relative $\pKa$'s.
+        so for any acid-base reaction, the position of the equilibrium can be predicted from the relative $\pKa$'s. This also makes intuitive sense: The stronger acid \emph{should} push harder on the equilibrium, forcing it to the other side.
     \end{itemize}
     \item Factors influencing acidity:
     \begin{itemize}
         \item Bond strength and size.
         \begin{itemize}
             \item As bond strength decreases, acidity increases.
-            \item As size of the conjugate base increases, acidity increases (there is more area over which to delocalize the positive charge).
+            \item As size of the conjugate base increases, acidity increases (there is more area over which to delocalize the positive charge, so the conjugate base is more stable, so acidity increases).
         \end{itemize}
         \item Electronegativity.
         \begin{itemize}
@@ -247,13 +254,13 @@
         \end{itemize}
         \item Hybridization.
         \begin{itemize}
-            \item $sp$ orbitals are more acidic than $sp^3$, with $sp^2$ in between. This is because the electrons are held closer to the nucleus and are less easily given away.
+            \item $sp$ orbitals are more acidic than $sp^3$, with $sp^2$ in between. This is because the electrons are held closer to the nucleus in the conjugate base, and thus are less easily given away in the reverse reaction.
         \end{itemize}
         \item Inductive effects.
         \begin{itemize}
             \item Electronic effects transmitted through bonds.
-            \item Electron donating or electron withdrawing groups.
-            \item Stronger electron withdrawing groups create more acidic compounds (the conjugate base is more stable, and the proton more easily dissociates).
+            \item Electron-donating or electron-withdrawing groups.
+            \item Stronger electron-withdrawing groups create more acidic compounds (the conjugate base is more stable, and the proton more easily dissociates).
             \item Falls off with distance.
             \item Alkyl groups are electron donating.
         \end{itemize}
@@ -278,7 +285,7 @@
         \begin{equation*}
             \ce{H2N- + H-OH <=>> HO- + NH3}
         \end{equation*}
-        \item Since $\pKa(\ce{H2O})=16$ and $\pKa(\ce{NH3})=38$, $K_\text{eq}=10^{38-16}=10^{22}$.
+        \item Since $\pKa(\ce{H2O})=14$ and $\pKa(\ce{NH3})=38$, $K_\text{eq}=10^{38-14}=10^{24}$.
     \end{itemize}
     \item We need a solvent with less acidic protons, e.g., hexane, diethyl ketone.
     \begin{itemize}
